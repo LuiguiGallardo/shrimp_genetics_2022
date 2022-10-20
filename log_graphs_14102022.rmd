@@ -74,7 +74,7 @@ geom_vline(xintercept=0,
 graph
 
 #Plot tiff
-ggsave(filename = "01_main_figures/02_bdiv_unweighted_unifrac/fig1_a.tiff",
+ggsave(filename = "05_final_figures/fig1_a.tiff",
      width=5,
      height=5,
      dpi=300,
@@ -134,7 +134,7 @@ geom_vline(xintercept=0,
 graph
 
 #Plot tiff
-ggsave(filename = "01_main_figures/02_bdiv_unweighted_unifrac/fig1_b.tiff",
+ggsave(filename = "05_final_figures/fig1_b.tiff",
      width=5,
      height=5,
      dpi=300,
@@ -195,7 +195,7 @@ geom_vline(xintercept=0,
 graph
 
 #Plot tiff
-ggsave(filename = "01_main_figures/02_bdiv_unweighted_unifrac/fig1_c.tiff",
+ggsave(filename = "05_final_figures/fig1_c.tiff",
      width=5,
      height=5,
      dpi=300,
@@ -203,7 +203,7 @@ ggsave(filename = "01_main_figures/02_bdiv_unweighted_unifrac/fig1_c.tiff",
 ```
 
 ## Figure 2: Alpha Diversity
-### Module A y B: Alpha diversity contrasting Organs, Chao1 and Shannon
+### Module A and B: Alpha diversity contrasting Organs, Chao1 and Shannon
 ```{r, echo=FALSE, fig.width=5, fig.height=5}
 alpha_data <- read.table(file = "01_main_figures/04_adiv_organs/alpha_organ.txt",
                          sep = "\t",
@@ -241,7 +241,7 @@ theme(text = element_text(size=12),
 chao1_boxplot
 
 #Plot tiff
-ggsave(filename = "01_main_figures/04_adiv_organs/fig2_a.tiff",
+ggsave(filename = "05_final_figures/fig2_a.tiff",
      width=5,
      height=5,
      dpi=300,
@@ -272,7 +272,7 @@ theme(text = element_text(size=12),
 shannon_boxplot
 
 #Plot tiff
-ggsave(filename = "01_main_figures/04_adiv_organs/fig2_b.tiff",
+ggsave(filename = "05_final_figures/fig2_b.tiff",
        width=5,
        height=5,
        dpi=300,
@@ -339,7 +339,7 @@ theme(text = element_text(size=12),
 boxplot_dist_centroid
 
 #Plot tiff
-ggsave(filename = "01_main_figures/06_niche_breadht_centroid_organs/distance_centroid_organs.tiff",
+ggsave(filename = "05_final_figures/fig2_c.tiff",
        width=5,
        height=5,
        dpi=300,
@@ -347,7 +347,7 @@ ggsave(filename = "01_main_figures/06_niche_breadht_centroid_organs/distance_cen
 
 ```
 
-### Module D y E: Alpha diversity contrasting Genetics (Mazatlan and Lajitas only), Chao1 and Shannon
+### Module D and E: Alpha diversity contrasting Genetics (Mazatlan and Lajitas only), Chao1 and Shannon
 ```{r, echo=FALSE, fig.width=5, fig.height=5}
 alpha_data <- read.table(file = "01_main_figures/11_adiv_genetics/genetics_alpha.txt",
                          sep = "\t",
@@ -384,7 +384,7 @@ theme(text = element_text(size=12),
 chao1_boxplot
 
 #Plot tiff
-ggsave(filename = "01_main_figures/11_adiv_genetics/fig2_c.tiff",
+ggsave(filename = "05_final_figures/fig2_d.tiff",
      width=5,
      height=5,
      dpi=300,
@@ -415,7 +415,7 @@ theme(text = element_text(size=12),
 shannon_boxplot
 
 #Plot tiff
-ggsave(filename = "01_main_figures/11_adiv_genetics/fig2_d.tiff",
+ggsave(filename = "05_final_figures/fig2_e.tiff",
        width=5,
        height=5,
        dpi=300,
@@ -572,7 +572,92 @@ ggarrange(heatmap,
 ```
 
 ## Figure 4: Heatmap probiotics
-### Module A: Intestine samples contrasting genetics
+### Module A and B: Intestine and hepatopancreas probiotics
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Data input
+table <- read.table(file = "03_probiotics/allsamples_probiotics_heatmap_log10.txt",
+    sep = "\t",
+    header = T,
+    check.names = FALSE)
+
+table <- melt(table, id=c("sample","group"))
+
+table$group <- factor(table$group, levels = c("Hepatopancreas Gen1", "Hepatopancreas Gen2",
+    "Intestine Gen1", "Intestine Gen2",
+    "Intestine healthy", "Intestine diseased"))
+
+# Only Hepatopancreascreas
+table_hep <- filter(table, group == "Hepatopancreas Gen1" | group == "Hepatopancreas Gen2")
+
+# Heatmap
+heatmap_prob <- ggplot(data = table_hep,
+    aes(x = sample,
+    y = variable,
+    fill = value)) +
+geom_tile() +
+theme_test() +
+scale_y_discrete(limits = rev(levels(table_hep$variable))) +
+scale_fill_distiller(palette = "YlOrRd",
+    direction = 1) +
+theme(legend.position = "top") +
+labs(x = "",
+    y = "",
+    fill = "log10 (relative\nabundance)") +
+facet_grid(~group,
+    scales = "free") +
+theme(axis.text.x = element_text(size = 8),
+    axis.text.y = element_text(size = 7,
+        vjust = 0.25),
+    legend.title = element_text(size = 10,
+        vjust = 1, hjust = 0.5),
+    legend.text = element_text(size = 6),
+    strip.text.x = element_text(size = 8))
+
+heatmap_prob
+
+#Plot tiff
+ggsave(filename = "01_main_figures/11_adiv_genetics/fig3_a.tiff",
+       width=5,
+       height=5,
+       dpi=300,
+       device="tiff")
+
+# Only hepatopancreas
+table_hep <- filter(table, group == "Intestine Gen1" | group == "Intestine Gen2")
+
+# Heatmap
+heatmap_prob <- ggplot(data = table_hep,
+    aes(x = sample,
+    y = variable,
+    fill = value)) +
+geom_tile() +
+theme_test() +
+scale_y_discrete(limits = rev(levels(table_hep$variable))) +
+scale_fill_distiller(palette = "YlOrRd",
+    direction = 1) +
+theme(legend.position = "top") +
+labs(x = "",
+    y = "",
+    fill = "log10 (relative\nabundance)") +
+facet_grid(~group,
+    scales = "free") +
+theme(axis.text.x = element_text(size = 8),
+    axis.text.y = element_text(size = 7,
+        vjust = 0.25),
+    legend.title = element_text(size = 10,
+        vjust = 1, hjust = 0.5),
+    legend.text = element_text(size = 6),
+    strip.text.x = element_text(size = 8))
+
+heatmap_prob
+
+#Plot tiff
+ggsave(filename = "01_main_figures/11_adiv_genetics/fig3_b.tiff",
+       width=5,
+       height=5,
+       dpi=300,
+       device="tiff")
+```
 
 
 ### Module B: Hepatopancreas samples contrasting genetics
