@@ -2,7 +2,7 @@
 title: "Graphs shrimp genetics 2022"
 #author: "Luigui Gallardo Becerra"
 date: "10/14/2022"
-output: html_document
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
@@ -246,7 +246,10 @@ ggsave(filename = "05_final_figures/fig2_a.tiff",
      height=5,
      dpi=300,
      device="tiff")
+```
 
+
+```{r, echo=FALSE, fig.width=5, fig.height=5}
 # Shannon
 shannon_boxplot <- ggplot(alpha_data,
                   aes(x = group,
@@ -390,6 +393,9 @@ ggsave(filename = "05_final_figures/fig2_d.tiff",
      dpi=300,
      device="tiff")
 
+```
+
+```{r, echo=FALSE, fig.width=5, fig.height=5}
 # Shannon
 shannon_boxplot <- ggplot(alpha_data,
                   aes(x = group,
@@ -495,10 +501,17 @@ ggarrange(heatmap,
           ncol = 2,
           nrow = 1,
           widths = c(2, 1))
+
+#Plot tiff
+ggsave(filename = "05_final_figures/fig3_a.tiff",
+       width=5,
+       height=5,
+       dpi=300,
+       device="tiff")
 ```
 
 
-### Module A: Hepatopancreas samples contrasting genetics
+### Module B: Hepatopancreas samples contrasting genetics
 ```{r, echo=FALSE, fig.width=6, fig.height=6}
 # Data input
 table <- read.table(file = "01_main_figures/10_lefse_tax_hep/hep_lefse_taxa.txt",
@@ -569,10 +582,17 @@ ggarrange(heatmap,
           ncol = 2,
           nrow = 1,
           widths = c(2, 1))
+
+#Plot tiff
+ggsave(filename = "05_final_figures/fig3_b.tiff",
+       width=5,
+       height=5,
+       dpi=300,
+       device="tiff")
 ```
 
 ## Figure 4: Heatmap probiotics
-### Module A and B: Intestine and hepatopancreas probiotics
+### Module A: Intestine samples
 ```{r, echo=FALSE, fig.width=5, fig.height=5}
 # Data input
 table <- read.table(file = "03_probiotics/allsamples_probiotics_heatmap_log10.txt",
@@ -616,12 +636,17 @@ theme(axis.text.x = element_text(size = 8),
 heatmap_prob
 
 #Plot tiff
-ggsave(filename = "01_main_figures/11_adiv_genetics/fig3_a.tiff",
+ggsave(filename = "05_final_figures/fig4_a.tiff",
        width=5,
        height=5,
        dpi=300,
        device="tiff")
 
+```
+
+### Module A: Hepatopancreas samples
+
+```{r, echo=FALSE, fig.width=5, fig.height=5}
 # Only hepatopancreas
 table_hep <- filter(table, group == "Intestine Gen1" | group == "Intestine Gen2")
 
@@ -652,13 +677,10 @@ theme(axis.text.x = element_text(size = 8),
 heatmap_prob
 
 #Plot tiff
-ggsave(filename = "01_main_figures/11_adiv_genetics/fig3_b.tiff",
+ggsave(filename = "05_final_figures/fig4_b.tiff",
        width=5,
        height=5,
        dpi=300,
        device="tiff")
 ```
-
-
-### Module B: Hepatopancreas samples contrasting genetics
 
