@@ -1,0 +1,101 @@
+---
+title: "Probiotics boxplots JP SUMATORIAS"
+#author: "Luigui Gallardo"
+date: "04.10.2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library("optparse")
+library("ggplot2")
+library("reshape")
+require("gridExtra")
+library("ggpubr")
+```
+
+```{r, echo=FALSE}
+# Data input
+summation <- read.table("sum_groups.txt",
+                             header=TRUE,
+                             sep="\t")
+
+
+# Reshape of matrix
+summation$group <- factor(summation$group, levels=c("DB_hep", "AG2_hep", "AG10_hep",
+                                                    "DB_gut", "AG2_gut", "AG10_gut"))
+
+# P-value groups
+p_value <- list(c("DB_gut", "AG2_gut"), 
+                    c("DB_gut", "AG10_gut"),
+                    c("DB_hep", "AG2_hep"), 
+                    c("DB_hep", "AG10_hep"))
+
+# log10 transformation
+summation$log10=log(summation$value)
+
+# Boxplot with species log10 transformation
+colors <- c("mediumseagreen", "blue", "darkviolet",
+            "mediumseagreen", "blue", "darkviolet")
+
+theme_set(theme_bw())
+
+# Boxplot relative abundance
+boxplot_summation <- ggplot(summation,
+                            aes(x = group,
+                            y = values)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 1,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="Relative abundance", 
+       title="Sumatorias por grupo",
+       subtitle = "") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   angle = 90,
+                                   hjust = 1,
+                                   vjust = 0.5),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors) +
+  stat_compare_means(comparisons = p_value,
+    method = "wilcox.test",
+    size = 2)
+
+# Boxplot relative abundance
+boxplot_summation_log10 <- ggplot(summation,
+                            aes(x = group,
+                            y = log10)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 1,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="log10 (Relative abundance)", 
+       title="Sumatorias por grupo con transformación log10",
+       subtitle = "") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   angle = 90,
+                                   hjust = 1,
+                                   vjust = 0.5),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors) +
+  stat_compare_means(comparisons = p_value,
+    method = "wilcox.test",
+    size = 2)
+
+#grid.arrange(boxplot_summation,
+#             boxplot_summation_log10,
+#             nrow=2)
+
+boxplot_summation_log10
+```

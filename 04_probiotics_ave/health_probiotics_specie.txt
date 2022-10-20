@@ -1,0 +1,7 @@
+sample	group	average
+7A	i-sano	0.001306927
+68-BI	i-sano	0.001930064
+139-I	i-sano	0.011234966
+2-BI	i-enfermo	0.001554378
+27-BI	i-enfermo	0.000105
+49-BI	i-enfermo	0.001338091

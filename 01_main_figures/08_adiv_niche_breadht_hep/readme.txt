@@ -1,0 +1,1 @@
+The originals files are in the directory "/media/luigui/interchange/01_documents_interchange/06_draft2019_23092019/02_cloroplasto_0.01_rep_pick_otus/14_adiv_2015_otu_table_draft2019_s_0.01.biom_hepatopancreas_e4832/alpha_div_collated".

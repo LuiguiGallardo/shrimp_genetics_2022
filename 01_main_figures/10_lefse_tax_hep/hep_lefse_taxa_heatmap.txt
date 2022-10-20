@@ -1,0 +1,63 @@
+hep_taxa	group	value	order
+c_Spartobacteria	Genetic 1	-2.72539630379324	1
+g_Brevibacterium	Genetic 1	-2.70487181415498	2
+g_Candidatus Xiphinematobacter	Genetic 1	-2.72539630379324	3
+g_Corynebacterium	Genetic 1	-2.4877457095399	4
+o_Aeromonadales	Genetic 1	-1.78066478006943	5
+o_Chthoniobacterales	Genetic 1	-2.72539630379324	6
+o_Clostridiales	Genetic 1	-2.10847932347822	7
+p_Synergistetes	Genetic 1	-5	8
+f_Brevibacteriaceae	Genetic 1	-2.70487181415498	9
+f_Chthoniobacteraceae	Genetic 1	-2.72539630379324	10
+f_Corynebacteriaceae	Genetic 1	-2.4877457095399	11
+f_Aeromonadaceae	Genetic 1	-2.24322160946381	12
+c_Oscillatoriophycideae	Genetic 1	-1.28094054706942	13
+c_Synergistia	Genetic 1	-5	14
+g_Arthrospira	Genetic 1	-3.21774314334981	15
+g_Desulfovibrio	Genetic 1	-5	16
+g_Hydrocoleum	Genetic 1	-3.12042591412946	17
+g_Lyngbya	Genetic 1	-3.53180041392739	18
+g_Phormidium	Genetic 1	-2.89160581883254	19
+g_Planktothricoides	Genetic 1	-4.3585258894959	20
+g_Trichodesmium	Genetic 1	-2.9847773456649	21
+o_Desulfovibrionales	Genetic 1	-5	22
+o_Oscillatoriales	Genetic 1	-1.77791095225126	23
+o_Synergistales	Genetic 1	-5	24
+p_Verrucomicrobia	Genetic 1	-2.42229924946189	25
+s_Arthrospira platensis	Genetic 1	-3.21780170050268	26
+s_Lyngbya hieronymusii	Genetic 1	-3.53179947287751	27
+s_Propionibacterium acnes	Genetic 1	-2.04936187556026	28
+f_Desulfovibrionaceae	Genetic 1	-5	29
+f_Thermovirgaceae	Genetic 1	-5	30
+f_Phormidiaceae	Genetic 1	-1.77791095225126	31
+c_Spartobacteria	Genetic 2	-5	1
+g_Brevibacterium	Genetic 2	-3.65810669132065	2
+g_Candidatus Xiphinematobacter	Genetic 2	-5	3
+g_Corynebacterium	Genetic 2	-5	4
+o_Aeromonadales	Genetic 2	-2.50701484145805	5
+o_Chthoniobacterales	Genetic 2	-5	6
+o_Clostridiales	Genetic 2	-2.42756349076271	7
+p_Synergistetes	Genetic 2	-2.41147370555825	8
+f_Brevibacteriaceae	Genetic 2	-3.65810669132065	9
+f_Chthoniobacteraceae	Genetic 2	-5	10
+f_Corynebacteriaceae	Genetic 2	-5	11
+f_Aeromonadaceae	Genetic 2	-3.05038070736741	12
+c_Oscillatoriophycideae	Genetic 2	-0.557705558999398	13
+c_Synergistia	Genetic 2	-2.41146891469963	14
+g_Arthrospira	Genetic 2	-2.14909534767906	15
+g_Desulfovibrio	Genetic 2	-1.86052156191754	16
+g_Hydrocoleum	Genetic 2	-1.92914299536002	17
+g_Lyngbya	Genetic 2	-2.61358130162698	18
+g_Phormidium	Genetic 2	-2.17124874370154	19
+g_Planktothricoides	Genetic 2	-3.11896131865716	20
+g_Trichodesmium	Genetic 2	-1.70964154799474	21
+o_Desulfovibrionales	Genetic 2	-1.86052156191754	22
+o_Oscillatoriales	Genetic 2	-0.582746422230553	23
+o_Synergistales	Genetic 2	-2.41146891469963	24
+p_Verrucomicrobia	Genetic 2	-3.01915540203106	25
+s_Arthrospira platensis	Genetic 2	-2.14909816807716	26
+s_Lyngbya hieronymusii	Genetic 2	-2.61358129450717	27
+s_Propionibacterium acnes	Genetic 2	-2.70681902759314	28
+f_Desulfovibrionaceae	Genetic 2	-1.86052156191754	29
+f_Thermovirgaceae	Genetic 2	-2.41146891469963	30
+f_Phormidiaceae	Genetic 2	-0.582746422230553	31

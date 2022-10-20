@@ -1,0 +1,8 @@
+organ_function	group	lda	order
+Digestive System	Gut	2.078769954	1
+Genetic Information Processing	Gut	3.090784546	2
+Transport and Catabolism	Hepatopancreas	2.318884694	3
+Cardiovascular Diseases	Hepatopancreas	2.365016538	4
+Circulatory System	Hepatopancreas	2.431405121	5
+Neurodegenerative Diseases	Hepatopancreas	2.570367438	6
+Lipid Metabolism	Hepatopancreas	2.94639399	7

@@ -1,0 +1,727 @@
+---
+title: "Probiotics boxplots"
+#author: "Luigui Gallardo"
+date: "15.08.2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("optparse")
+library("ggplot2")
+library("reshape")
+```
+
+# Genus level
+## Only Hepatopancreas samples
+
+```{r, echo=FALSE}
+# Data input
+hepatopancreas <- read.table("genus_hep.txt",
+          header=TRUE,
+          sep="\t")
+
+# Reshape of matrix
+hepatopancreas <- melt(hepatopancreas, id.vars=c("sample", "group"))
+
+# Boxplot with genus
+colors <- c("darkviolet", "mediumseagreen")
+theme_set(theme_bw())
+
+boxplot_hepatopancreas <- ggplot(hepatopancreas,
+    aes(x = variable,
+    y = value,
+    fill=)) +
+geom_boxplot(aes(color = group)) +
+geom_point(aes(color = group),
+    size = 1,
+    shape = 21,
+    position = position_jitterdodge()) +
+labs(x="", 
+    y="Relative abundance", 
+    title="Only hepatopancreas samples genetics",
+    subtitle = "Genus level") +
+theme(legend.title = element_blank(),
+    axis.text.x = element_text(size = 8,
+                               hjust = 1,
+                               angle = 45),
+    plot.title = element_text(face = "bold",
+    hjust = 0.5,
+    size = 15)) +
+scale_color_manual(values = colors)
+
+boxplot_hepatopancreas
+
+# log10 transformation
+hepatopancreas$value=log(hepatopancreas$value)
+
+# Boxplot with genus log10 transformation
+colors <- c("darkviolet", "mediumseagreen")
+theme_set(theme_bw())
+
+boxplot_hepatopancreas_log10 <- ggplot(hepatopancreas,
+    aes(x = variable,
+    y = value,
+    fill=)) +
+geom_boxplot(aes(color = group)) +
+geom_point(aes(color = group),
+    size = 1,
+    shape = 21,
+    position = position_jitterdodge()) +
+labs(x="", 
+    y="Relative abundance (log10)", 
+    title="Only hepatopancreas samples genetics",
+    subtitle = "Genus level with log10 transformation") +
+theme(legend.title = element_blank(),
+    axis.text.x = element_text(size = 8,
+                               hjust = 1,
+                               angle = 45),
+    plot.title = element_text(face = "bold",
+    hjust = 0.5,
+    size = 15)) +
+scale_color_manual(values = colors)
+
+boxplot_hepatopancreas_log10
+```
+
+## Only Gut samples Genetics
+
+```{r, echo=FALSE}
+# Data input
+gut_genetics <- read.table("genus_gut_gen.txt",
+          header=TRUE,
+          sep="\t")
+
+# Reshape of matrix
+gut_genetics <- melt(gut_genetics, id.vars=c("sample", "group"))
+
+# Boxplot with genus
+colors <- c("darkviolet", "mediumseagreen")
+theme_set(theme_bw())
+
+boxplot_gut_genetics <- ggplot(gut_genetics,
+    aes(x = variable,
+    y = value,
+    fill=)) +
+geom_boxplot(aes(color = group)) +
+geom_point(aes(color = group),
+    size = 1,
+    shape = 21,
+    position = position_jitterdodge()) +
+labs(x="", 
+    y="Relative abundance", 
+    title="Only gut samples genetics",
+    subtitle = "Genus level") +
+theme(legend.title = element_blank(),
+    axis.text.x = element_text(size = 8,
+                               hjust = 1,
+                               angle = 45),
+    plot.title = element_text(face = "bold",
+    hjust = 0.5,
+    size = 15)) +
+scale_color_manual(values = colors)
+
+boxplot_gut_genetics
+
+# log10 transformation
+gut_genetics$value=log(gut_genetics$value)
+
+# Boxplot with genus log10 transformation
+colors <- c("darkviolet", "mediumseagreen")
+theme_set(theme_bw())
+
+boxplot_gut_genetics_log10 <- ggplot(gut_genetics,
+    aes(x = variable,
+    y = value,
+    fill=)) +
+geom_boxplot(aes(color = group)) +
+geom_point(aes(color = group),
+    size = 1,
+    shape = 21,
+    position = position_jitterdodge()) +
+labs(x="", 
+    y="Relative abundance (log10)", 
+    title="Only gut samples genetics",
+    subtitle = "Genus level with log10 transformation") +
+theme(legend.title = element_blank(),
+    axis.text.x = element_text(size = 8,
+                               hjust = 1,
+                               angle = 45),
+    plot.title = element_text(face = "bold",
+    hjust = 0.5,
+    size = 15)) +
+scale_color_manual(values = colors)
+
+boxplot_gut_genetics_log10
+```
+
+## Only Gut samples Health status
+
+```{r, echo=FALSE}
+# Data input
+gut_health <- read.table("genus_gut_health.txt",
+          header=TRUE,
+          sep="\t")
+
+# Reshape of matrix
+gut_health <- melt(gut_health, id.vars=c("sample", "group"))
+
+# Boxplot with genus
+colors <- c("red", "blue")
+theme_set(theme_bw())
+
+boxplot_gut_health <- ggplot(gut_health,
+    aes(x = variable,
+    y = value,
+    fill=)) +
+geom_boxplot(aes(color = group)) +
+geom_point(aes(color = group),
+    size = 1,
+    shape = 21,
+    position = position_jitterdodge()) +
+labs(x="", 
+    y="Relative abundance", 
+    title="Only gut samples health status",
+    subtitle = "Genus level") +
+theme(legend.title = element_blank(),
+    axis.text.x = element_text(size = 8,
+                               hjust = 1,
+                               angle = 45),
+    plot.title = element_text(face = "bold",
+    hjust = 0.5,
+    size = 15)) +
+scale_color_manual(values = colors)
+
+boxplot_gut_health
+
+# log10 transformation
+gut_health$value=log(gut_health$value)
+
+# Boxplot with genus log10 transformation
+colors <- c("red", "blue")
+theme_set(theme_bw())
+
+boxplot_gut_health_log10 <- ggplot(gut_health,
+    aes(x = variable,
+    y = value,
+    fill=)) +
+geom_boxplot(aes(color = group)) +
+geom_point(aes(color = group),
+    size = 1,
+    shape = 21,
+    position = position_jitterdodge()) +
+labs(x="", 
+    y="Relative abundance (log10)", 
+    title="Only gut samples health status",
+    subtitle = "Genus level with log10 transformation") +
+theme(legend.title = element_blank(),
+    axis.text.x = element_text(size = 8,
+                               hjust = 1,
+                               angle = 45),
+    plot.title = element_text(face = "bold",
+    hjust = 0.5,
+    size = 15)) +
+scale_color_manual(values = colors)
+
+boxplot_gut_health_log10
+```
+
+## All gut samples
+
+```{r, echo=FALSE}
+# Data input
+gut_allsamples <- read.table("genus_gut_allsamples.txt",
+          header=TRUE,
+          sep="\t")
+
+# Reshape of matrix
+gut_allsamples <- melt(gut_allsamples, id.vars=c("sample", "group"))
+
+# Boxplot with genus
+colors <- c("darkviolet", "mediumseagreen", "red", "blue")
+theme_set(theme_bw())
+
+boxplot_gut_allsamples <- ggplot(gut_allsamples,
+    aes(x = variable,
+    y = value,
+    fill=)) +
+geom_boxplot(aes(color = group)) +
+geom_point(aes(color = group),
+    size = 0.2,
+    shape = 21,
+    position = position_jitterdodge()) +
+labs(x="", 
+    y="Relative abundance", 
+    title="All gut samples",
+    subtitle = "Genus level") +
+theme(legend.title = element_blank(),
+    axis.text.x = element_text(size = 8,
+                               hjust = 1,
+                               angle = 45),
+    plot.title = element_text(face = "bold",
+    hjust = 0.5,
+    size = 15)) +
+scale_color_manual(values = colors)
+
+boxplot_gut_allsamples
+
+# log10 transformation
+gut_allsamples$value=log(gut_allsamples$value)
+
+# Boxplot with genus log10 transformation
+colors <- c("darkviolet", "mediumseagreen", "red", "blue")
+theme_set(theme_bw())
+
+boxplot_gut_allsamples_log10 <- ggplot(gut_allsamples,
+    aes(x = variable,
+    y = value,
+    fill=)) +
+geom_boxplot(aes(color = group)) +
+geom_point(aes(color = group),
+    size = 0.2,
+    shape = 21,
+    position = position_jitterdodge()) +
+labs(x="", 
+    y="Relative abundance (log10)", 
+    title="All gut samples",
+    subtitle = "Genus level with log10 transformation") +
+theme(legend.title = element_blank(),
+    axis.text.x = element_text(size = 8,
+                               hjust = 1,
+                               angle = 45),
+    plot.title = element_text(face = "bold",
+    hjust = 0.5,
+    size = 15)) +
+scale_color_manual(values = colors)
+
+boxplot_gut_allsamples_log10
+```
+
+## All samples
+
+```{r, echo=FALSE}
+# Data input
+allsamples <- read.table("genus_allsamples.txt",
+          header=TRUE,
+          sep="\t")
+
+# Reshape of matrix
+allsamples <- melt(allsamples, id.vars=c("sample", "group"))
+
+# Boxplot with genus
+colors <- c("darkviolet", "mediumseagreen", "red", "darkviolet", "mediumseagreen", "blue")
+theme_set(theme_bw())
+
+boxplot_allsamples <- ggplot(allsamples,
+    aes(x = variable,
+    y = value,
+    fill=)) +
+geom_boxplot(aes(color = group)) +
+geom_point(aes(color = group),
+    size = 0.2,
+    shape = 21,
+    position = position_jitterdodge()) +
+labs(x="", 
+    y="Relative abundance", 
+    title="All samples",
+    subtitle = "Genus level") +
+theme(legend.title = element_blank(),
+    axis.text.x = element_text(size = 8,
+                               hjust = 1,
+                               angle = 45),
+    plot.title = element_text(face = "bold",
+    hjust = 0.5,
+    size = 15)) +
+scale_color_manual(values = colors)
+
+boxplot_allsamples
+
+# log10 transformation
+allsamples$value=log(allsamples$value)
+
+# Boxplot with genus log10 transformation
+colors <- c("darkviolet", "mediumseagreen", "red", "darkviolet", "mediumseagreen", "blue")
+theme_set(theme_bw())
+
+boxplot_allsamples_log10 <- ggplot(allsamples,
+    aes(x = variable,
+    y = value,
+    fill=)) +
+geom_boxplot(aes(color = group)) +
+geom_point(aes(color = group),
+    size = 0.2,
+    shape = 21,
+    position = position_jitterdodge()) +
+labs(x="", 
+    y="Relative abundance (log10)", 
+    title="All samples",
+    subtitle = "Genus level with log10 transformation") +
+theme(legend.title = element_blank(),
+    axis.text.x = element_text(size = 8,
+                               hjust = 1,
+                               angle = 45),
+    plot.title = element_text(face = "bold",
+    hjust = 0.5,
+    size = 15)) +
+scale_color_manual(values = colors)
+
+boxplot_allsamples_log10
+```
+
+# Species level
+
+## Only Hepatopancreas samples
+
+```{r, echo=FALSE}
+# Data input
+hepatopancreas <- read.table("species_hep.txt",
+                             header=TRUE,
+                             sep="\t")
+
+# Reshape of matrix
+hepatopancreas <- melt(hepatopancreas, id.vars=c("sample", "group"))
+
+# Boxplot with species
+colors <- c("darkviolet", "mediumseagreen")
+theme_set(theme_bw())
+
+boxplot_hepatopancreas <- ggplot(hepatopancreas,
+                                 aes(x = variable,
+                                     y = value,
+                                     fill=)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 1,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="Relative abundance", 
+       title="Only hepatopancreas samples genetics",
+       subtitle = "Species level") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   hjust = 1,
+                                   angle = 45),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors)
+
+boxplot_hepatopancreas
+
+# log10 transformation
+hepatopancreas$value=log(hepatopancreas$value)
+
+# Boxplot with species log10 transformation
+colors <- c("darkviolet", "mediumseagreen")
+theme_set(theme_bw())
+
+boxplot_hepatopancreas_log10 <- ggplot(hepatopancreas,
+                                       aes(x = variable,
+                                           y = value,
+                                           fill=)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 1,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="Relative abundance (log10)", 
+       title="Only hepatopancreas samples genetics",
+       subtitle = "Species level with log10 transformation") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   hjust = 1,
+                                   angle = 45),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors)
+
+boxplot_hepatopancreas_log10
+```
+
+## Only Gut samples Genetics
+
+```{r, echo=FALSE}
+# Data input
+gut_genetics <- read.table("species_gut_gen.txt",
+                           header=TRUE,
+                           sep="\t")
+
+# Reshape of matrix
+gut_genetics <- melt(gut_genetics, id.vars=c("sample", "group"))
+
+# Boxplot with species
+colors <- c("darkviolet", "mediumseagreen")
+theme_set(theme_bw())
+
+boxplot_gut_genetics <- ggplot(gut_genetics,
+                               aes(x = variable,
+                                   y = value,
+                                   fill=)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 1,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="Relative abundance", 
+       title="Only gut samples genetics",
+       subtitle = "Species level") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   hjust = 1,
+                                   angle = 45),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors)
+
+boxplot_gut_genetics
+
+# log10 transformation
+gut_genetics$value=log(gut_genetics$value)
+
+# Boxplot with species log10 transformation
+colors <- c("darkviolet", "mediumseagreen")
+theme_set(theme_bw())
+
+boxplot_gut_genetics_log10 <- ggplot(gut_genetics,
+                                     aes(x = variable,
+                                         y = value,
+                                         fill=)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 1,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="Relative abundance (log10)", 
+       title="Only gut samples genetics",
+       subtitle = "Species level with log10 transformation") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   hjust = 1,
+                                   angle = 45),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors)
+
+boxplot_gut_genetics_log10
+```
+
+## Only Gut samples Health status
+
+```{r, echo=FALSE}
+# Data input
+gut_health <- read.table("species_gut_health.txt",
+                         header=TRUE,
+                         sep="\t")
+
+# Reshape of matrix
+gut_health <- melt(gut_health, id.vars=c("sample", "group"))
+
+# Boxplot with species
+colors <- c("red", "blue")
+theme_set(theme_bw())
+
+boxplot_gut_health <- ggplot(gut_health,
+                             aes(x = variable,
+                                 y = value,
+                                 fill=)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 1,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="Relative abundance", 
+       title="Only gut samples health status",
+       subtitle = "Species level") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   hjust = 1,
+                                   angle = 45),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors)
+
+boxplot_gut_health
+
+# log10 transformation
+gut_health$value=log(gut_health$value)
+
+# Boxplot with species log10 transformation
+colors <- c("red", "blue")
+theme_set(theme_bw())
+
+boxplot_gut_health_log10 <- ggplot(gut_health,
+                                   aes(x = variable,
+                                       y = value,
+                                       fill=)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 1,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="Relative abundance (log10)", 
+       title="Only gut samples health status",
+       subtitle = "Species level with log10 transformation") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   hjust = 1,
+                                   angle = 45),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors)
+
+boxplot_gut_health_log10
+```
+
+## All gut samples
+
+```{r, echo=FALSE}
+# Data input
+gut_allsamples <- read.table("species_gut_allsamples.txt",
+                             header=TRUE,
+                             sep="\t")
+
+# Reshape of matrix
+gut_allsamples <- melt(gut_allsamples, id.vars=c("sample", "group"))
+
+# Boxplot with species
+colors <- c("darkviolet", "mediumseagreen", "red", "blue")
+theme_set(theme_bw())
+
+boxplot_gut_allsamples <- ggplot(gut_allsamples,
+                                 aes(x = variable,
+                                     y = value,
+                                     fill=)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 0.2,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="Relative abundance", 
+       title="All gut samples",
+       subtitle = "Species level") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   hjust = 1,
+                                   angle = 45),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors)
+
+boxplot_gut_allsamples
+
+# log10 transformation
+gut_allsamples$value=log(gut_allsamples$value)
+
+# Boxplot with species log10 transformation
+colors <- c("darkviolet", "mediumseagreen", "red", "blue")
+theme_set(theme_bw())
+
+boxplot_gut_allsamples_log10 <- ggplot(gut_allsamples,
+                                       aes(x = variable,
+                                           y = value,
+                                           fill=)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 0.2,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="Relative abundance (log10)", 
+       title="All gut samples",
+       subtitle = "Species level with log10 transformation") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   hjust = 1,
+                                   angle = 45),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors)
+
+boxplot_gut_allsamples_log10
+```
+
+## All samples
+
+```{r, echo=FALSE}
+# Data input
+allsamples <- read.table("species_allsamples.txt",
+                         header=TRUE,
+                         sep="\t")
+
+# Reshape of matrix
+allsamples <- melt(allsamples, id.vars=c("sample", "group"))
+
+# Boxplot with species
+colors <- c("darkviolet", "mediumseagreen", "red", "darkviolet", "mediumseagreen", "blue")
+theme_set(theme_bw())
+
+boxplot_allsamples <- ggplot(allsamples,
+                             aes(x = variable,
+                                 y = value,
+                                 fill=)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 0.2,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="Relative abundance", 
+       title="All samples",
+       subtitle = "Species level") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   hjust = 1,
+                                   angle = 45),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors)
+
+boxplot_allsamples
+
+# log10 transformation
+allsamples$value=log(allsamples$value)
+
+# Boxplot with species log10 transformation
+colors <- c("darkviolet", "mediumseagreen", "red", "darkviolet", "mediumseagreen", "blue")
+theme_set(theme_bw())
+
+boxplot_allsamples_log10 <- ggplot(allsamples,
+                                   aes(x = variable,
+                                       y = value,
+                                       fill=)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 0.2,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="Relative abundance (log10)", 
+       title="All samples",
+       subtitle = "Species level with log10 transformation") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   hjust = 1,
+                                   angle = 45),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors)
+
+boxplot_allsamples_log10
+```

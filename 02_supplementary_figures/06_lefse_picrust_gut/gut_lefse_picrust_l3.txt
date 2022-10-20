@@ -1,0 +1,19 @@
+gut_function	group	lda	order
+Ether lipid metabolism	Genetic 1	2.04505171368	1
+Benzoate degradation	Genetic 1	2.36404987227	2
+Alanine_aspartate and glutamate metabolism	Genetic 1	2.39569642281	3
+Fatty acid metabolism	Genetic 1	2.37889780016	4
+Glyoxylate and dicarboxylate metabolism	Genetic 1	2.31122768295	5
+ABC transporters	Genetic 1	2.84776360639	6
+Valine_leucine and isoleucine degradation	Genetic 1	2.68640165553	7
+Primary immunodeficiency	Genetic 1	2.04973410526	8
+Transporters	Genetic 1	3.33681867603	9
+Ubiquinonea nd other terpenoid_quinone biosynthesis	Genetic 2	2.64940782318	10
+VEGF signaling pathway	Genetic 2	2.25509609825	11
+Signal transduction mechanisms	Genetic 2	2.53457119635	12
+Protein kinases	Genetic 2	2.91949491244	13
+Sulfurrelay system	Genetic 2	2.29785232748	14
+Replication_recombination and repair proteins	Genetic 2	2.90780311955	15
+Xylene degradation	Genetic 2	2.01136593313	16
+Chaperones and folding catalysts	Genetic 2	2.8209432004	17
+

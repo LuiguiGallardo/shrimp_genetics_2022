@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="80mm"
+   height="80mm"
+   viewBox="0 0 80 80"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="hep_lefse_picrust_final.svg"
+   inkscape:export-filename="/home/luigui/Documentos/shrimp_genetics_2020/02_supplementary_figures/07_lefse_picrust_hep/hep_lefse_picrust_final.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
+  <defs
+     id="defs2">
+    <clipPath
+       id="clipPath58"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         inkscape:connector-curvature="0"
+         id="path56"
+         d="M 0,0 H 504 V 504 H 0 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath70"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         inkscape:connector-curvature="0"
+         id="path68"
+         d="M 217.54,33.79 H 498.52 V 467.38 H 217.54 Z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath240">
+      <path
+         d="M 0,0 H 504 V 504 H 0 Z"
+         id="path238" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath252">
+      <path
+         d="M 225.6,33.79 H 498.52 V 467.38 H 225.6 Z"
+         id="path250" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath208">
+      <path
+         d="M 0,0 H 504 V 504 H 0 Z"
+         id="path206" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath220">
+      <path
+         d="M 326.19,33.79 H 498.52 V 467.38 H 326.19 Z"
+         id="path218" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="179.12002"
+     inkscape:cy="158.65233"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:document-rotation="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-217)">
+    <g
+       id="g168"
+       inkscape:label="organ_barplot_picrust_l3"
+       transform="matrix(0.15783451,0,0,-0.15783451,0,296.5486)">
+      <g
+         id="g170" />
+      <g
+         id="g172" />
+      <g
+         id="g174" />
+      <g
+         id="g176" />
+      <g
+         id="g178" />
+      <g
+         id="g180" />
+      <g
+         id="g182" />
+      <g
+         id="g184" />
+      <g
+         id="g186" />
+      <g
+         id="g188" />
+      <g
+         id="g190" />
+      <g
+         id="g192" />
+      <g
+         id="g194" />
+      <g
+         id="g196" />
+      <g
+         id="g198" />
+      <g
+         id="g200" />
+      <g
+         id="g202">
+        <g
+           id="g204"
+           clip-path="url(#clipPath208)">
+          <path
+             d="M 0,0 H 504 V 504 H 0 Z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.07;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path210" />
+        </g>
+      </g>
+      <g
+         id="g212" />
+      <g
+         id="g214">
+        <g
+           id="g216"
+           clip-path="url(#clipPath220)">
+          <path
+             d="M 326.19,33.79 H 498.52 V 467.38 H 326.19 Z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path222" />
+          <path
+             d="M 326.19,33.79 H 458.33 V 168.35 H 326.19 Z"
+             style="fill:#ff4500;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path224" />
+          <path
+             d="M 326.19,183.3 H 434.28 V 317.86 H 326.19 Z"
+             style="fill:#ff4500;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path226" />
+          <path
+             d="M 326.19,332.82 H 459.63 V 467.38 H 326.19 Z"
+             style="fill:#4169e1;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path228" />
+          <path
+             d="M 326.19,33.79 H 498.52 V 467.38 H 326.19 Z"
+             style="fill:none;stroke:#333333;stroke-width:1.07;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path230" />
+        </g>
+      </g>
+      <g
+         id="g232" />
+      <g
+         id="g234" />
+      <g
+         id="g236" />
+      <g
+         id="g238" />
+      <g
+         id="g240" />
+      <g
+         id="g242" />
+      <g
+         id="g244" />
+      <g
+         id="g246" />
+      <g
+         id="g248" />
+      <g
+         id="g250" />
+      <g
+         id="g252" />
+      <g
+         id="g254" />
+      <g
+         id="g256" />
+      <g
+         id="g258" />
+      <g
+         id="g260" />
+      <g
+         id="g262">
+        <text
+           transform="matrix(1,0,0,-1,19.48,95.68)"
+           style="font-variant:normal;font-weight:normal;font-size:15px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text266"><tspan
+             x="0 10.83 19.17 27.51 30.84 34.169998 41.669998 50.009998 54.18 57.509998 65.849998 74.190002 78.360001 83.355003 91.695 99.195 107.535 120.03 128.37 131.7 140.03999 148.38 152.55 155.88 164.22 172.56 176.73 185.07001 193.41 201.75 205.92 210.91499 219.255 227.595 235.935 239.265 244.25999 248.42999 256.76999 261.76501 270.10501 274.27499 282.61499 285.94501 294.285"
+             y="0"
+             sodipodi:role="line"
+             id="tspan264">Replication recombination and repair proteins</tspan></text>
+        <text
+           transform="matrix(1,0,0,-1,184.7,245.2)"
+           style="font-variant:normal;font-weight:normal;font-size:15px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text270"><tspan
+             x="0 7.3649998 14.865 19.860001 28.200001 35.700001 39.029999 47.369999 55.709999 59.880001 72.375 80.714996 84.885002 93.224998 101.565 109.905 113.235 116.565 124.065"
+             y="0"
+             sodipodi:role="line"
+             id="tspan268">Tyrosine metabolism</tspan></text>
+        <text
+           transform="matrix(1,0,0,-1,145.99,394.71)"
+           style="font-variant:normal;font-weight:normal;font-size:15px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text274"><tspan
+             x="0 10.005 18.344999 25.844999 30.014999 38.355 43.575001 46.904999 55.244999 58.575001 62.744999 70.245003 78.584999 86.084999 91.080002 99.419998 103.59 106.92 115.26 123.6 127.77 135.27 142.77 150.27 154.44 162.78"
+             y="0"
+             sodipodi:role="line"
+             id="tspan272">Bacterial secretion system</tspan></text>
+      </g>
+      <g
+         id="g276" />
+      <g
+         id="g278">
+        <path
+           d="m 323.45,101.07 h 2.74"
+           style="fill:none;stroke:#333333;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           id="path280" />
+        <path
+           d="m 323.45,250.58 h 2.74"
+           style="fill:none;stroke:#333333;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           id="path282" />
+        <path
+           d="m 323.45,400.1 h 2.74"
+           style="fill:none;stroke:#333333;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           id="path284" />
+      </g>
+      <g
+         id="g286" />
+      <g
+         id="g288" />
+      <g
+         id="g290" />
+      <g
+         id="g292" />
+      <g
+         id="g294" />
+      <g
+         id="g296" />
+      <g
+         id="g298" />
+      <g
+         id="g300" />
+      <g
+         id="g302" />
+      <g
+         id="g304">
+        <path
+           d="m 326.19,31.05 v 2.74"
+           style="fill:none;stroke:#333333;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           id="path306" />
+        <path
+           d="m 375.43,31.05 v 2.74"
+           style="fill:none;stroke:#333333;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           id="path308" />
+        <path
+           d="m 424.67,31.05 v 2.74"
+           style="fill:none;stroke:#333333;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           id="path310" />
+        <path
+           d="m 473.9,31.05 v 2.74"
+           style="fill:none;stroke:#333333;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           id="path312" />
+      </g>
+      <g
+         id="g314" />
+      <g
+         id="g316">
+        <text
+           transform="matrix(1,0,0,-1,323.41,21.68)"
+           style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text320"><tspan
+             x="0"
+             y="0"
+             id="tspan318">0</tspan></text>
+        <text
+           transform="matrix(1,0,0,-1,372.65,21.68)"
+           style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text324"><tspan
+             x="0"
+             y="0"
+             id="tspan322">1</tspan></text>
+        <text
+           transform="matrix(1,0,0,-1,421.89,21.68)"
+           style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text328"><tspan
+             x="0"
+             y="0"
+             id="tspan326">2</tspan></text>
+        <text
+           transform="matrix(1,0,0,-1,471.12,21.68)"
+           style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text332"><tspan
+             x="0"
+             y="0"
+             id="tspan330">3</tspan></text>
+      </g>
+      <g
+         id="g334" />
+      <g
+         id="g336" />
+      <g
+         id="g338" />
+      <g
+         id="g340" />
+      <g
+         id="g342" />
+      <g
+         id="g344">
+        <text
+           transform="matrix(1,0,0,-1,355.91,8.12)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text348"><tspan
+             x="0 6.6719999 14.856 22.860001 26.195999 34.200001 42.863998 52.200001 60.863998 68.867996 72.204002 76.199997 78.863998 85.536003 92.208 95.543999 102.216 108.888"
+             y="0"
+             sodipodi:role="line"
+             id="tspan346">LDA SCORE (log 10)</tspan></text>
+      </g>
+      <g
+         id="g350" />
+      <g
+         id="g352" />
+      <g
+         id="g354" />
+      <g
+         id="g356" />
+      <g
+         id="g358" />
+      <g
+         id="g360" />
+      <g
+         id="g362" />
+      <g
+         id="g364" />
+      <g
+         id="g366" />
+      <g
+         id="g368">
+        <path
+           d="m 317.86,478.34 h 189 v 20.18 h -189 z"
+           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path370" />
+      </g>
+      <g
+         id="g372" />
+      <g
+         id="g374" />
+      <g
+         id="g376" />
+      <g
+         id="g378">
+        <text
+           transform="matrix(1,0,0,-1,317.86,491.34)"
+           style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text382"><tspan
+             x="0 6.6700001 11.67 16.67 22.23 27.23 29.450001 35.009998 37.790001 43.349998"
+             y="0"
+             sodipodi:role="line"
+             id="tspan380">Associated</tspan></text>
+        <text
+           transform="matrix(1,0,0,-1,329.53,480.54)"
+           style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text386"><tspan
+             x="0 5.5599999 8.8900003 14.45 20.01"
+             y="0"
+             sodipodi:role="line"
+             id="tspan384">group</tspan></text>
+      </g>
+      <g
+         id="g388" />
+      <g
+         id="g390" />
+      <g
+         id="g392">
+        <path
+           d="m 371.75,481.24 h 17.28 v 17.28 h -17.28 z"
+           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path394" />
+      </g>
+      <g
+         id="g396" />
+      <g
+         id="g398">
+        <path
+           d="m 372.46,481.95 h 15.86 v 15.86 h -15.86 z"
+           style="fill:#4169e1;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path400" />
+      </g>
+      <g
+         id="g402" />
+      <g
+         id="g404">
+        <path
+           d="m 441.79,481.24 h 17.28 v 17.28 h -17.28 z"
+           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path406" />
+      </g>
+      <g
+         id="g408" />
+      <g
+         id="g410">
+        <path
+           d="m 442.5,481.95 h 15.86 v 15.86 H 442.5 Z"
+           style="fill:#ff4500;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path412" />
+      </g>
+      <g
+         id="g414" />
+      <g
+         id="g416" />
+      <g
+         id="g418" />
+      <g
+         id="g420">
+        <text
+           transform="matrix(1,0,0,-1,394.01,486.29)"
+           style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text424"><tspan
+             x="0 7.7800002 13.34 18.9 24.459999 27.24 29.459999 34.459999 37.240002"
+             y="0"
+             sodipodi:role="line"
+             id="tspan422">Genetic 1</tspan></text>
+      </g>
+      <g
+         id="g426" />
+      <g
+         id="g428" />
+      <g
+         id="g430" />
+      <g
+         id="g432" />
+      <g
+         id="g434">
+        <text
+           transform="matrix(1,0,0,-1,464.05,486.29)"
+           style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text438"><tspan
+             x="0 7.7800002 13.34 18.9 24.459999 27.24 29.459999 34.459999 37.240002"
+             y="0"
+             sodipodi:role="line"
+             id="tspan436">Genetic 2</tspan></text>
+      </g>
+      <g
+         id="g440" />
+      <g
+         id="g442" />
+      <g
+         id="g444" />
+      <g
+         id="g446" />
+      <g
+         id="g448" />
+      <g
+         id="g450" />
+      <g
+         id="g452" />
+      <g
+         id="g454" />
+      <g
+         id="g456" />
+      <g
+         id="g458" />
+      <g
+         id="g460" />
+      <g
+         id="g462" />
+      <g
+         id="g464" />
+    </g>
+  </g>
+</svg>

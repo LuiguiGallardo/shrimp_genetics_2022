@@ -1,0 +1,5 @@
+hep_function	group	lda	order
+Replication recombination and repair proteins	Genetic 2	2.68385602687	3
+Tyrosine metabolism	Genetic 2	2.19533306572	2
+Bacterial secretion system	Genetic 1	2.71026817111	1
+

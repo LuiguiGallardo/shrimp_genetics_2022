@@ -1,0 +1,11 @@
+sample	group	average
+HL1	Genetic 1	0.294921941
+HL2	Genetic 1	0.249633432
+HL4	Genetic 1	0.61400113
+HL5	Genetic 1	0.257871503
+HL7	Genetic 1	0.30499496
+HA1	Genetic 2	0.078147238
+HA2	Genetic 2	0.529336638
+HA5	Genetic 2	0.19783308
+HA7	Genetic 2	0.2915769
+HA8	Genetic 2	0.356601905

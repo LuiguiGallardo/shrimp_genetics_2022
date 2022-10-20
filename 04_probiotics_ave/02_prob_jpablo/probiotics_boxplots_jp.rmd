@@ -1,0 +1,191 @@
+---
+title: "Probiotics boxplots JP"
+#author: "Luigui Gallardo"
+date: "18.08.2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library("optparse")
+library("ggplot2")
+library("reshape")
+require("gridExtra")
+```
+
+```{r, echo=FALSE, fig.height=9}
+# Data input
+hepatopancreas <- read.table("species_hep.txt",
+                             header=TRUE,
+                             sep="\t")
+
+hepatopancreas_part1 <- hepatopancreas[1:23]
+
+hepatopancreas_part2 <- hepatopancreas[,-3:-23]
+
+# Reshape of matrix
+hepatopancreas <- melt(hepatopancreas, id.vars=c("sample", "group"))
+
+hepatopancreas_part1 <- melt(hepatopancreas_part1, id.vars=c("sample", "group"))
+
+hepatopancreas_part2 <- melt(hepatopancreas_part2, id.vars=c("sample", "group"))
+
+hepatopancreas$group <- factor(hepatopancreas$group, levels=c("DB", "AG2", "AG10"))
+
+hepatopancreas_part1$group <- factor(hepatopancreas_part1$group, levels=c("DB", "AG2", "AG10"))
+
+hepatopancreas_part2$group <- factor(hepatopancreas_part2$group, levels=c("DB", "AG2", "AG10"))
+
+# log10 transformation
+hepatopancreas$value=log(hepatopancreas$value)
+
+hepatopancreas_part1$value=log(hepatopancreas_part1$value)
+
+hepatopancreas_part2$value=log(hepatopancreas_part2$value)
+
+# Boxplot with species log10 transformation
+colors <- c("mediumseagreen", "blue", "darkviolet")
+
+theme_set(theme_bw())
+
+#Part 1
+boxplot_hepatopancreas_part1_log10 <- ggplot(hepatopancreas_part1,
+                                       aes(x = variable[],
+                                           y = value,
+                                           fill=)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 1,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="Relative abundance (log10)", 
+       title="Only hepatopancreas samples",
+       subtitle = "Species level with log10 transformation") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   angle = 90,
+                                   hjust = 1,
+                                   vjust = 0.5),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors)
+
+# Part 2
+boxplot_hepatopancreas_part2_log10 <- ggplot(hepatopancreas_part2,
+                                       aes(x = variable[],
+                                           y = value,
+                                           fill=)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 1,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="Relative abundance (log10)", 
+       title="Only hepatopancreas samples",
+       subtitle = "Species level with log10 transformation") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   angle = 90,
+                                   hjust = 1,
+                                   vjust = 0.5),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors)
+
+grid.arrange(boxplot_hepatopancreas_part1_log10,
+            boxplot_hepatopancreas_part2_log10,
+            nrow=2)
+```
+
+```{r, echo=FALSE, fig.height=9}
+# Data input
+gut <- read.table("species_gut.txt",
+                             header=TRUE,
+                             sep="\t")
+
+gut_part1 <- gut[1:23]
+
+gut_part2 <- gut[,-3:-23]
+
+# Reshape of matrix
+gut <- melt(gut, id.vars=c("sample", "group"))
+
+gut_part1 <- melt(gut_part1, id.vars=c("sample", "group"))
+
+gut_part2 <- melt(gut_part2, id.vars=c("sample", "group"))
+
+gut$group <- factor(gut$group, levels=c("DB", "AG2", "AG10"))
+
+gut_part1$group <- factor(gut_part1$group, levels=c("DB", "AG2", "AG10"))
+
+gut_part2$group <- factor(gut_part2$group, levels=c("DB", "AG2", "AG10"))
+
+# log10 transformation
+gut$value=log(gut$value)
+
+gut_part1$value=log(gut_part1$value)
+
+gut_part2$value=log(gut_part2$value)
+
+# Boxplot with species log10 transformation
+colors <- c("mediumseagreen", "blue", "darkviolet")
+
+theme_set(theme_bw())
+
+#Part 1
+boxplot_gut_part1_log10 <- ggplot(gut_part1,
+                                             aes(x = variable[],
+                                                 y = value,
+                                                 fill=)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 1,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="Relative abundance (log10)", 
+       title="Only gut samples",
+       subtitle = "Species level with log10 transformation") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   angle = 90,
+                                   hjust = 1,
+                                   vjust = 0.5),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors)
+
+# Part 2
+boxplot_gut_part2_log10 <- ggplot(gut_part2,
+                                             aes(x = variable[],
+                                                 y = value,
+                                                 fill=)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 1,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="Relative abundance (log10)", 
+       title="Only gut samples",
+       subtitle = "Species level with log10 transformation") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   angle = 90,
+                                   hjust = 1,
+                                   vjust = 0.5),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors)
+
+grid.arrange(boxplot_gut_part1_log10,
+             boxplot_gut_part2_log10,
+             nrow=2)
+```

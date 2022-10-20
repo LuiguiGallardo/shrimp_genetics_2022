@@ -1,0 +1,25 @@
+organ_function	group	lda	order
+Signal transduction mechanisms	Gut	2.010967434	1
+Folate biosynthesis	Gut	2.053830915	2
+Peptidoglycan biosynthesis	Gut	2.109778413	3
+Arginine and proline metabolism	Gut	2.332491656	4
+Starch and sucrose metabolism	Gut	2.505865959	5
+Protein folding and associated processing	Gut	2.517181746	6
+Replication recombination and repair proteins	Gut	2.805678008	7
+Phenylalanine metabolism	Hepatopancreas	2.001005378	8
+Synthesis and degradation of ketone bodies	Hepatopancreas	2.052077093	9
+Glyoxylate and dicarboxylate metabolism	Hepatopancreas	2.245912365	10
+Glycerophospholipid metabolism	Hepatopancreas	2.246908083	11
+Pentose and glucuronate interconversions	Hepatopancreas	2.306844287	12
+Caprolactam degradation	Hepatopancreas	2.357911631	13
+beta Alanine metabolism	Hepatopancreas	2.374437102	14
+Limonene and pinene degradation	Hepatopancreas	2.420521272	15
+Geraniol degradation	Hepatopancreas	2.505480719	16
+Lysine degradation	Hepatopancreas	2.512006409	17
+Benzoate degradation	Hepatopancreas	2.522669275	18
+Fattyacid metabolism	Hepatopancreas	2.534774619	19
+Energy metabolism	Hepatopancreas	2.548344313	20
+Tryptophan metabolism	Hepatopancreas	2.562587033	21
+Propanoate metabolism	Hepatopancreas	2.610975158	22
+Valine leucine and isoleucine degradation	Hepatopancreas	2.670408747	23
+Butanoate metabolism	Hepatopancreas	2.72760608	24

@@ -1,0 +1,8 @@
+gut_function	group	lda	order
+Cardiovascular Diseases	Genetic 1	2.97572375626	1
+Amino Acid Metabolism	Genetic 1	3.18892548989	2
+Immune System Diseases	Genetic 1	2.57072496509	3
+Metabolic Diseases	Genetic 2	2.40557799981	4
+Enzyme Families	Genetic 2	3.11926181745	5
+Immune System	Genetic 2	2.49651205448	6
+

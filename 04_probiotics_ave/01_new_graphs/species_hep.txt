@@ -1,0 +1,12 @@
+sample	group	Bacillus amyloliquefaciens	Bacillus aryabhattai	Bacillus cereus	Bacillus endophyticus	Bacillus firmus	Bacillus foraminis	Bacillus licheniformis	Bacillus megaterium	Bacillus pumilus	Bacillus subtilis	Bacillus thuringiensis	Bacillus vireti	Enterobacter hormaechei	Pseudoalteromonas flavipulchra	Pseudoalteromonas ruthenica	Rhodopseudomonas palustris	Shewanella algae	Staphylococcus haemolyticus	Streptococcus salivarius	Vibrio alginolyticus	Vibrio fluvialis	Vibrio gazogenes	Vibrio hepatarius	Vibrio mediterranei
+HL1	Genetic 1	2.59E-05	2.59E-05	0	0	0	0	0	2.59E-05	0	7.78E-05	0	0	0	0	0	2.59E-05	0	0	0	0.00080438	0	0	0	0.000103791
+HL2	Genetic 1	0	0	3.67E-05	0	0	0	3.67E-05	0	3.67E-05	0.00022	0	7.33E-05	0	3.67E-05	3.67E-05	0	0.00011	0	0	0.001209677	7.33E-05	0	7.33E-05	0.000219941
+HL4	Genetic 1	0	0	1.59E-05	0	6.38E-05	0	1.59E-05	0	6.38E-05	6.38E-05	0	4.78E-05	0	4.78E-05	0	0	1.59E-05	0	0	0.00233	0.000159385	0	0.026537671	0.000430341
+HL5	Genetic 1	0	0	2.26E-05	0	6.78E-05	0	0	0	2.26E-05	2.26E-05	0	2.26E-05	0	0	0	0	0.00011301	0	0	0.000542446	4.52E-05	0	0	0.000158214
+HL7	Genetic 1	0	0	0.001409756	0	4.03E-05	0	8.06E-05	0	8.06E-05	0.000121	0.00121	4.03E-05	0	4.03E-05	0	0	8.06E-05	0	0	0.000886	8.06E-05	0	0	0.000120836
+HA1	Genetic 2	0	0	0	0	0	0	0	0	0	0.000258766	0	0	0	0	0	0.000129383	0.000258766	0	0.00090568	0.000258766	0	0	0	0.000258766
+HA2	Genetic 2	0	0	0	0	0.000446548	8.93E-05	0	0	0	0	0	0	0	8.93E-05	0	8.93E-05	0.000179	0	0	0.001339645	0	0	0.000357239	8.93E-05
+HA5	Genetic 2	0	8.27E-05	0	0	0.000165412	0	8.27E-05	0	0	0	0	0.000165412	0	0	8.27E-05	0	8.27E-05	0	0	0.000331	8.27E-05	0	8.27E-05	0.000165412
+HA7	Genetic 2	0	0	0	2.91E-05	0	0	0	0	2.91E-05	0	0	0	0	2.91E-05	0	0	0	0	0	0.000727633	2.91E-05	0	0	5.82E-05
+HA8	Genetic 2	0	0	0	0	0	0	2.91E-05	0	0	0	0	5.82E-05	0	0	0	2.91E-05	2.91E-05	0	0	0.00105	0	0	0	0.000116367
+

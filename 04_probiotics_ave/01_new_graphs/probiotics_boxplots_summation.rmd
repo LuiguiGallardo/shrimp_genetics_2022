@@ -1,0 +1,240 @@
+---
+title: "Probiotics boxplots"
+#author: "Luigui Gallardo"
+date: "15.08.2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("optparse")
+library("ggplot2")
+library("reshape")
+require("gridExtra")
+```
+
+# Genus level
+```{r, echo=FALSE, fig.height=7.5}
+# Data input
+summation <- read.table("sum_genus_groups.txt",
+                             header=TRUE,
+                             sep="\t")
+
+# Reshape of matrix
+summation$group <- factor(summation$group, levels=c("Hep_Genetic_1", "Hep_Genetic_2",
+                                                    "Gut_Genetic_1", "Gut_Genetic_2",
+                                                    "Gut_healthy", "Gut_diseased"))
+
+# log10 transformation
+summation$log10=log(summation$sum)
+
+# Define colors
+colors <- c("mediumseagreen", "darkviolet",
+            "mediumseagreen", "darkviolet",
+            "blue", "red")
+
+# Boxplot relative abundance
+theme_set(theme_bw())
+
+boxplot_summation <- ggplot(summation,
+                            aes(x = group,
+                            y = sum)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 1,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="Relative abundance", 
+       title="Sumatorias de géneros por grupo",
+       subtitle = "") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   angle = 90,
+                                   hjust = 1,
+                                   vjust = 0.5),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors)
+
+# Boxplot relative abundance
+boxplot_summation_log10 <- ggplot(summation,
+                            aes(x = group,
+                            y = log10)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 1,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="log10 (Relative abundance)", 
+       title="Sumatorias de géneros grupo con transformación log10",
+       subtitle = "") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   angle = 90,
+                                   hjust = 1,
+                                   vjust = 0.5),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors)
+
+grid.arrange(boxplot_summation,
+             boxplot_summation_log10,
+             nrow=2)
+```
+
+# Species level
+```{r, echo=FALSE, fig.height=7.5}
+# Data input
+summation <- read.table("sum_species_groups.txt",
+                             header=TRUE,
+                             sep="\t")
+
+# Reshape of matrix
+summation$group <- factor(summation$group, levels=c("Healthy Gut", "Diseased Gut",
+                                                    "Gut G1", "Gut G2",
+                                                    "Hepatopancreas G1", "Hepatopancreas G2"))
+
+# log10 transformation
+summation$log10=log(summation$sum)
+
+# Define colors
+colors <- c("blue", "red",
+            "mediumseagreen", "darkviolet",
+            "mediumseagreen", "darkviolet")
+
+# Boxplot relative abundance
+theme_set(theme_bw())
+
+boxplot_summation <- ggplot(summation,
+                            aes(x = group,
+                            y = sum)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 1,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="Relative abundance", 
+       title="Sumatorias de especies por grupo",
+       subtitle = "") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   angle = 90,
+                                   hjust = 1,
+                                   vjust = 0.5),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors)
+
+# Boxplot relative abundance
+boxplot_summation_log10 <- ggplot(summation,
+                            aes(x = group,
+                            y = log10)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 1,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="log10 (Relative abundance)", 
+       title="Sumatorias de especies por grupo con transformación log10",
+       subtitle = "") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   angle = 33,
+                                   hjust = 1,
+                                   vjust = 1),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors)
+
+
+grid.arrange(boxplot_summation,
+             boxplot_summation_log10,
+             nrow=2)
+
+ggsave(filename = "probiotics_species_summation_log10.svg",
+       width = 7,
+       height = 3.5)
+```
+
+# Species/Genus
+```{r, echo=FALSE, fig.height=7.5}
+# Data input
+summation <- read.table("sum_genus-species_groups.txt",
+                             header=TRUE,
+                             sep="\t",
+                        check.names = FALSE)
+
+# Reshape of matrix
+summation$group <- factor(summation$group, levels=c("Gut healthy", "Gut diseased",
+                                                    "Gut G1", "Gut G2",
+                                                    "Hepatopancreas G1", "Hepatopancreas G2"))
+
+# log10 transformation
+summation$log10=log(summation$sum)
+
+# Define colors
+colors <- c("blue", "red",
+            "mediumseagreen", "darkviolet",
+            "mediumseagreen", "darkviolet")
+
+# Boxplot relative abundance
+theme_set(theme_bw())
+
+boxplot_summation <- ggplot(summation,
+                            aes(x = group,
+                            y = sum)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 1,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="Relative abundance", 
+       title="Sumatorias de Género/Especie por grupo",
+       subtitle = "") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   angle = 90,
+                                   hjust = 1,
+                                   vjust = 0.5),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors)
+
+# Boxplot relative abundance
+boxplot_summation_log10 <- ggplot(summation,
+                            aes(x = group,
+                            y = log10)) +
+  geom_boxplot(aes(color = group)) +
+  geom_point(aes(color = group),
+             size = 1,
+             shape = 21,
+             position = position_jitterdodge()) +
+  labs(x="", 
+       y="log10 (Relative abundance)", 
+       title="Sumatorias de Género/Especie por grupo con transformación log10",
+       subtitle = "") +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(size = 8,
+                                   angle = 90,
+                                   hjust = 1,
+                                   vjust = 0.5),
+        plot.title = element_text(face = "bold",
+                                  hjust = 0.5,
+                                  size = 15)) +
+  scale_color_manual(values = colors)
+
+grid.arrange(boxplot_summation,
+             boxplot_summation_log10,
+             nrow=2)
+```

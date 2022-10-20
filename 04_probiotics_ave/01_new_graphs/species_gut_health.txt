@@ -1,0 +1,8 @@
+sample	group	Bacillus amyloliquefaciens	Bacillus aryabhattai	Bacillus cereus	Bacillus endophyticus	Bacillus firmus	Bacillus foraminis	Bacillus licheniformis	Bacillus megaterium	Bacillus pumilus	Bacillus subtilis	Bacillus thuringiensis	Bacillus vireti	Enterobacter hormaechei	Pseudoalteromonas flavipulchra	Pseudoalteromonas ruthenica	Rhodopseudomonas palustris	Shewanella algae	Staphylococcus haemolyticus	Streptococcus salivarius	Vibrio alginolyticus	Vibrio fluvialis	Vibrio gazogenes	Vibrio hepatarius	Vibrio mediterranei
+7A	i-sano	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.00070373	0	0	0.000603197	0
+68-BI	i-sano	0	0	0	0	1.52E-05	3.81E-06	3.81E-06	0	0	0	0	3.81E-06	0	0	0	0	0	0	0	0.000483472	0	0	0.001309563	0.000110399
+139-I	i-sano	0	0	8.99E-05	0	0	0	0.000449398	0	0	0.000808916	0	0	0	0	0	0	0	0	0	0.004673737	0	0	0.004763617	0.000449398
+2-BI	i-enfermo	0	0	0	0	1.36E-05	6.82E-06	0	0	0	0	0	1.36E-05	0	0	0	0	0	0	0	0.001084022	0	0	0.000224986	0.00021135
+27-BI	i-enfermo	0	0	0	0	0	0	0	0	0	0	0	2.1E-05	0	0	0	0	0	0	2.1E-05	4.2E-05	0	0	0	2.1E-05
+49-BI	i-enfermo	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.001189414	0	0	0.000148677	0
+

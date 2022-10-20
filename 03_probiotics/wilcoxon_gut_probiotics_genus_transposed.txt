@@ -1,0 +1,2 @@
+	obs.x	obs.y	obs.tot	statistic	pvalue	alternative	location.null	exact	corrected
+1	25	25	50	406.5	0.0690154452115912	two.sided	0	FALSE	TRUE

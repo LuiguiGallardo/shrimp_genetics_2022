@@ -1,0 +1,51 @@
+group	gut gen1 log10	gut gen2 log10	order
+Aeromonas	-3.1995567097283	-3.6863328963425	genus
+Afifella	-5.56331269864241	-7	genus
+Bacillus	-2.39438190052079	-3.01176742165624	genus
+Bdellovibrio	-4.93804641111506	-5.11690664142431	genus
+Bowmanella	-5.35654732351381	-5.3066512453087	genus
+Clostridium	-1.8390991964095	-2.95386478977269	genus
+Ectothiorhodospira	-5.75E+00	-7	genus
+Enterobacter	-3.30E+00	-3.56264000227521	genus
+Enterococcus	-5.56E+00	-6.06333548699992	genus
+Exiguobacterium	-4.36410226231015	-7	genus
+Glutamicibacter	-5.10054612243371	-7	genus
+Lactobacillus	-5.27029268121494	-7	genus
+Lactococcus	-4.82198185908084	-7	genus
+Marinomonas	-4.21106980646588	-5.55E+00	genus
+Phaeobacter	-4.48722624648271	-5.27083521030723	genus
+Pseudoalteromonas	-1.87122110607872	-2.26217394833564	genus
+Pseudomonas	-3.08668200295382	-3.55259867680154	genus
+Rhodobacter	-5.56331269864241	-7	genus
+Rhodopseudomonas	-7	-5.8377642762338	genus
+Shewanella	-2.93266898013801	-3.43275607032431	genus
+Staphylococcus	-3.33E+00	-4.78195315395796	genus
+Streptococcus	-4.57808691288402	-6.06333548699992	genus
+Streptomyces	-4.18780348646208	-4.5031934655819	genus
+Vibrio	-0.471293149983172	-5.06E-01	genus
+Weissella	-5.56331269864241	-4.8073600773794	genus
+Bacillus amyloliquefaciens	-7	-5.8377642762338	specie
+Bacillus aryabhattai	-5.20296109538509	-6.31614279459965	specie
+Bacillus cereus	-4.21973454701352	-5.55284196865778	specie
+Bacillus endophyticus	-7	-7	specie
+Bacillus firmus	-4.05887433649436	-5.11499518336175	specie
+Bacillus foraminis	-4.82294567580171	-5.49485002168009	specie
+Bacillus licheniformis	-5.06214623638866	-5.2839966563652	specie
+Bacillus megaterium	-5.56331269864241	-5.82515550634454	specie
+Bacillus pumilus	-4.3210066151619	-4.7636063514966	specie
+Bacillus subtilis	-3.70499707952426	-4.48581364567631	specie
+Bacillus thuringiensis	-5.56331269864241	-7	specie
+Bacillus vireti	-3.72476122593222	-4.23021884968443	specie
+Enterobacter hormaechei	-5.01772876696043	-5.18622558999444	specie
+Pseudoalteromonas flavipulchra	-5.46428824648624	-5.13735588329583	specie
+Pseudoalteromonas ruthenica	-4.98576096183759	-5.3085383349606	specie
+Rhodopseudomonas palustris	-7	-5.8377642762338	specie
+Shewanella algae	-3.61098372875256	-4.15879762987978	specie
+Staphylococcus haemolyticus	-4.73074397258223	-7	specie
+Streptococcus salivarius	-4.90541358724091	-7	specie
+Vibrio alginolyticus	-2.90372573806185	-2.98347403753122	specie
+Vibrio fluvialis	-5.46428824648624	-5.6050407715138	specie
+Vibrio gazogenes	-5.46428824648624	-7	specie
+Vibrio gutatarius	-3.39336426013308	-3.91097637638583	specie
+Vibrio mediterranei	-3.59972577564935	-3.65284237036432	specie
+
