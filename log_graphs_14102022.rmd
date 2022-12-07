@@ -689,8 +689,7 @@ ggsave(filename = "05_final_figures/fig4_a.tiff",
 
 ```
 
-### Module A: Hepatopancreas samples
-
+### Module B: Hepatopancreas samples
 ```{r, echo=FALSE, fig.width=5, fig.height=5}
 # Only hepatopancreas
 table_hep <- filter(table, group == "Intestine Gen1" | group == "Intestine Gen2")
@@ -729,3 +728,88 @@ ggsave(filename = "05_final_figures/fig4_b.tiff",
        device="tiff")
 ```
 
+### Module C: Barplots with probiotics genera-level.
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Barplot probiotics, only intestine samples
+probiotics_gut_genera <- data.frame(
+  group=c("EMS negative",
+         "EMS positive"),
+  value=c(0.5532893363,
+          0.2995207370)
+  )
+
+# Define colors
+colors <- c("royalblue",
+            "orangered")
+
+# Heatmap
+barplot <- ggplot(data = probiotics_gut_genera,
+    aes(x = value,
+    y = group,
+    fill = group)) +
+geom_bar(stat = "identity") +
+  coord_flip() +
+  scale_fill_manual(values = colors) +
+theme_test() +
+  scale_x_continuous(limits = c(0, 0.6),
+                     expand = c(0, 0)) +
+labs(x = "Relative abundance",
+    y = "",
+    title = "Genera-level probiotics") +
+theme(legend.position = "none",
+      text = element_text(size=12),
+      axis.title.y = element_text(size=12),
+      plot.title = element_text(hjust = 0.5))
+
+barplot
+
+#Plot tiff
+ggsave(filename = "05_final_figures/fig4_c.tiff",
+       width=5,
+       height=5,
+       dpi=300,
+       device="tiff")
+```
+
+### Module C: Barplots with probiotics species-level.
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Barplot probiotics, only intestine samples
+probiotics_gut_species <- data.frame(
+  group=c("EMS negative",
+         "EMS positive"),
+  value=c(0.0048239857,
+          0.0009991528)
+  )
+
+# Define colors
+colors <- c("royalblue",
+            "orangered")
+
+# Heatmap
+barplot <- ggplot(data = probiotics_gut_species,
+    aes(x = value,
+    y = group,
+    fill = group)) +
+geom_bar(stat = "identity") +
+  coord_flip() +
+  scale_fill_manual(values = colors) +
+theme_test() +
+  scale_x_continuous(limits = c(0, 0.005),
+                     expand = c(0, 0)) +
+labs(x = "Relative abundance",
+     y = "",
+     title = "Species-level probiotics") +
+theme(legend.position = "none",
+      text = element_text(size=12),
+      axis.title.y = element_text(size=12),
+      plot.title = element_text(hjust = 0.5))
+
+barplot
+
+#Plot tiff
+ggsave(filename = "05_final_figures/fig4_d.tiff",
+       width=5,
+       height=5,
+       dpi=300,
+       device="tiff")
+```
