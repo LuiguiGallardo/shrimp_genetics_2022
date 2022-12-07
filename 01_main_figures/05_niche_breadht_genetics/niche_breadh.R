@@ -27,30 +27,29 @@ table_dfwc <- summarySEwithin(table,
 colors <- c("royalblue", "orangered")
 p_value <- list(c("Genetic 1", "Genetic 2"))
 # Plot
-barplot_niche <- ggplot(table_dfwc,
-    aes(x = group,
-        y = value),
-        fill = group) +
-geom_col(aes(fill = group),
-    colour="black") +
-theme_test() +
-theme(legend.position = "none") +
-labs(x = "",
-    y = "Niche breadth") +
-scale_fill_manual(values = colors) +
-geom_errorbar(aes(ymin=value-sd, ymax=value+sd),
-    width = 0.2) +
-theme(text = element_text(size = 12),
-    axis.title.y = element_text(size = 14),
-    axis.text.x = element_text(size = 14)) +
-stat_compare_means(data = table, comparisons = p_value,
-#    label = "p.signif",
-    method = "wilcox.test") +
-scale_x_discrete(expand = c(0.25, 0.25)) +
-scale_y_continuous(limits = c(0, 3.15),
-    expand = c(0, 0)) +
-theme(text = element_text(size = 14),
-    axis.title.y = element_text(size = 15))
+barplot_niche <- ggplot(table,
+                        aes(x = group,
+                            y = value),
+                        fill = group) +
+  geom_boxplot(aes(color = group),
+               outlier.shape = NA) +
+  geom_point(aes(color = group),
+             size = 2,
+             shape = 21,
+             position = position_jitterdodge()) +
+  theme_test() +
+  theme(legend.position = "none") +
+  labs(x = "",
+       y = "Niche breadth") +
+  scale_color_manual(values = colors) +
+  theme(text = element_text(size = 24),
+        axis.title.y = element_text(size = 24)) +
+  stat_compare_means(comparisons = p_value,
+                     method = "wilcox.test") +
+  theme(text = element_text(size = 24),
+        axis.title.y = element_text(size = 24))
+
+
 # Creation of pdf
 pdf(file = "niche_breadht_genetics.pdf", width = 5, height = 5)
 print(barplot_niche)

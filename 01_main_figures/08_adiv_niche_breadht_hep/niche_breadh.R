@@ -1,4 +1,3 @@
- 
 #!/usr/bin/env Rscript
 ## Purpose of script: niche breadht barplot
 ## Date created: 23.07.2020
