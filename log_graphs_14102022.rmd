@@ -467,7 +467,7 @@ theme(text = element_text(size=12),
 
 boxplot_niche
 #Plot tiff
-ggsave(filename = "05_final_figures/fig2_g.tiff",
+ggsave(filename = "05_final_figures/fig2_f.tiff",
        width=5,
        height=5,
        dpi=300,
@@ -734,8 +734,8 @@ ggsave(filename = "05_final_figures/fig4_b.tiff",
 probiotics_gut_genera <- data.frame(
   group=c("EMS negative",
          "EMS positive"),
-  value=c(0.5532893363,
-          0.2995207370)
+  value=c(0.553149,
+          0.299520)
   )
 
 # Define colors
@@ -777,8 +777,8 @@ ggsave(filename = "05_final_figures/fig4_c.tiff",
 probiotics_gut_species <- data.frame(
   group=c("EMS negative",
          "EMS positive"),
-  value=c(0.0048239857,
-          0.0009991528)
+  value=c(0.004824,
+          0.000999)
   )
 
 # Define colors

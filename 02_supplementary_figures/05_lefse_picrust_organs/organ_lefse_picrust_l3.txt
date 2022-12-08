@@ -1,11 +1,11 @@
 organ_function	group	lda	order
-Signal transduction mechanisms	Gut	2.010967434	1
-Folate biosynthesis	Gut	2.053830915	2
-Peptidoglycan biosynthesis	Gut	2.109778413	3
-Arginine and proline metabolism	Gut	2.332491656	4
-Starch and sucrose metabolism	Gut	2.505865959	5
-Protein folding and associated processing	Gut	2.517181746	6
-Replication recombination and repair proteins	Gut	2.805678008	7
+Signal transduction mechanisms	Intestine	2.010967434	1
+Folate biosynthesis	Intestine	2.053830915	2
+Peptidoglycan biosynthesis	Intestine	2.109778413	3
+Arginine and proline metabolism	Intestine	2.332491656	4
+Starch and sucrose metabolism	Intestine	2.505865959	5
+Protein folding and associated processing	Intestine	2.517181746	6
+Replication recombination and repair proteins	Intestine	2.805678008	7
 Phenylalanine metabolism	Hepatopancreas	2.001005378	8
 Synthesis and degradation of ketone bodies	Hepatopancreas	2.052077093	9
 Glyoxylate and dicarboxylate metabolism	Hepatopancreas	2.245912365	10

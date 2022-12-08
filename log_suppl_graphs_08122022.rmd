@@ -1,0 +1,725 @@
+---
+title: "Graphs shrimp genetics 2022"
+#author: "Luigui Gallardo Becerra"
+date: "07/12/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library("optparse")
+library("ggplot2")
+library("reshape")
+require("gridExtra")
+library("ggpubr")
+library("ggh4x")
+library("dplyr")
+library("rstatix")
+library("vegan")
+library(tiff)
+library(grid)
+library("RColorBrewer")
+library(VennDiagram)
+
+```
+
+## Supplementary figure 1: Rarefaction curves with all samples. A) Observed OTUs, B) Chao1 Index, C) Shannon Index and D) Good's Coverage
+
+```{r , fig.align="center", echo=FALSE}
+grid.raster(readTIFF("./05_final_figures/suppl_fig1.tiff"))
+```
+
+## Supplementary figure 2: Beta diversity contrasting Organs, Genetics and Ponds (Jaccard Index)
+### Module A: Beta diversity contrasting Organs
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Data input
+data <- read.table(file ="./02_supplementary_figures/02_bdiv_jaccard/pcoa_data.txt",
+    header = TRUE,
+    sep = '\t')
+
+group = data$Organ
+
+# Define colors
+colors <- c("mediumseagreen",
+            "darkviolet")
+
+# Define shapes
+shapes <- c(15,
+            16)
+
+# Creation of plot
+theme_set(theme_bw())
+graph <- ggplot(data, aes(y = pc2.0.12926151779759.,
+                          x = pc3.0.0821986422754955.)) +
+geom_point(aes(col=group,
+               shape=group),
+           size = 3) +
+stat_chull(aes(colour = group,
+               fill = group),
+          alpha = 0.1,
+          geom = "polygon") +
+scale_color_manual(values = colors) +
+scale_shape_manual(values = shapes) +
+  scale_fill_manual(values = colors) +
+labs(x="PC3 (8.22%)", 
+    y="PC2 (12.93%)",
+    subtitle = "ANOSIM=0.3299; p-value=0.001",
+    title = "") +
+geom_hline(yintercept=0,
+    color = "gray") +
+geom_vline(xintercept=0,
+    color = "gray") +
+  theme(legend.title = element_blank(),
+        legend.position = c(0.5, 1.1),
+        legend.direction = "horizontal",
+        legend.background = element_blank(),
+        legend.text = element_text(size=12),
+        axis.text.x = element_text(size=12),
+        axis.text.y = element_text(size=12),
+        axis.title.x = element_text(size=12),
+        axis.title.y = element_text(size=12),
+        plot.subtitle = element_text(hjust = 0.5,
+                                     vjust = -1))
+
+graph
+
+#Plot tiff
+ggsave(filename = "./05_final_figures/suppl_fig2_a.tiff",
+     width=5,
+     height=5,
+     dpi=300,
+     device="tiff")
+```
+
+### Module B: Beta diversity contrasting Genetics
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Data input
+data <- read.table(file ="./02_supplementary_figures/02_bdiv_jaccard/pcoa_data.txt",
+    header = TRUE,
+    sep = '\t')
+
+group = data$Genetic
+
+# Define colors
+colors <- c("royalblue",
+            "orangered")
+
+# Define shapes
+shapes <- c(15, 16)
+
+# Creation of plot
+theme_set(theme_bw())
+graph <- ggplot(data, aes(y = pc2.0.12926151779759.,
+                          x = pc3.0.0821986422754955.)) +
+geom_point(aes(col=group,
+    shape=group),
+    size = 3) +
+stat_chull(aes(colour = group,
+               fill = group),
+          alpha = 0.1,
+          geom = "polygon") +
+scale_color_manual(values = colors) +
+scale_shape_manual(values = shapes) +
+  scale_fill_manual(values = colors) +
+labs(x="PC3 (8.22%)", 
+    y="PC2 (12.93%)",
+    subtitle = "ANOSIM=0.1704; p-value=0.033",
+    title = "") +
+geom_hline(yintercept=0,
+    color = "gray") +
+geom_vline(xintercept=0,
+    color = "gray") +
+  theme(legend.title = element_blank(),
+        legend.position = c(0.5, 1.1),
+        legend.direction = "horizontal",
+        legend.background = element_blank(),
+        legend.text = element_text(size=12),
+        axis.text.x = element_text(size=12),
+        axis.text.y = element_text(size=12),
+        axis.title.x = element_text(size=12),
+        axis.title.y = element_text(size=12),
+        plot.subtitle = element_text(hjust = 0.5,
+                                     vjust = -1))
+
+graph
+
+#Plot tiff
+ggsave(filename = "./05_final_figures/suppl_fig2_b.tiff",
+     width=5,
+     height=5,
+     dpi=300,
+     device="tiff")
+```
+
+## Module C: Beta diversity contrasting Ponds
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Data input
+data <- read.table(file ="./02_supplementary_figures/02_bdiv_jaccard/pcoa_data.txt",
+    header = TRUE,
+    sep = '\t')
+
+group = data$Pond
+
+# Define colors
+colors <- c( "royalblue",
+             "darkgreen",
+             "orangered")
+
+# Define shapes
+shapes <- c(15, 16, 17)
+
+# Creation of plot
+theme_set(theme_bw())
+graph <- ggplot(data, aes(y = pc2.0.12926151779759.,
+                          x = pc3.0.0821986422754955.)) +
+geom_point(aes(col=group,
+    shape=group),
+    size = 3) +
+stat_chull(aes(colour = group,
+               fill = group),
+          alpha = 0.1,
+          geom = "polygon") +
+scale_color_manual(values = colors) +
+scale_shape_manual(values = shapes) +
+  scale_fill_manual(values = colors) +
+labs(x="PC3 (8.22%)", 
+    y="PC2 (12.93%)",
+    subtitle = "ANOSIM=0.1455; p-value=0.006",
+    title = "") +
+geom_hline(yintercept=0,
+    color = "gray") +
+geom_vline(xintercept=0,
+    color = "gray") +
+  theme(legend.title = element_blank(),
+        legend.position = c(0.5, 1.1),
+        legend.direction = "horizontal",
+        legend.background = element_blank(),
+        legend.text = element_text(size=11),
+        axis.text.x = element_text(size=12),
+        axis.text.y = element_text(size=12),
+        axis.title.x = element_text(size=12),
+        axis.title.y = element_text(size=12),
+        plot.subtitle = element_text(hjust = 0.5,
+                                     vjust = -1))
+
+graph
+
+#Plot tiff
+ggsave(filename = "./05_final_figures/suppl_fig2_c.tiff",
+     width=5,
+     height=5,
+     dpi=300,
+     device="tiff")
+```
+
+## Supplementary figure 3: Taxonomy (>0.01%) at 
+### Module A phyla level
+```{r, echo=FALSE, fig.width=6, fig.height=6}
+# Input table
+table <- read.table(file = "./01_main_figures/03_sumtax_0.01/phylum.txt",
+                    header = TRUE,
+                    sep = "\t")
+
+# Colors
+colourCount = length(unique(table$taxa))
+getPalette = colorRampPalette(brewer.pal(9, "Set3"))
+
+# Barplot
+barplot_tax <- ggplot(table) +
+geom_col(aes(x = pond,
+    y = value,
+    fill = taxa)) +
+facet_grid(~organ) +
+labs(x = "",
+    y = "Relative abundance",
+    fill = "Phyla") +
+scale_x_discrete(expand = c(0, 0)) +
+scale_y_continuous(limits = c(0, 1.01),
+    expand = c(0, 0)) +
+scale_fill_manual(values = getPalette(colourCount)) +
+theme_test() +
+theme(text = element_text(size = 15),
+    axis.text.x = element_text(size = 14,
+        angle = 45,
+        hjust = 1),
+    legend.title = element_text(size = 15,
+    hjust = 0.5),
+    legend.key.height = unit(1, "line"),
+    legend.key.width = unit(1, "line")) +
+guides(fill = guide_legend(ncol = 1, byrow = FALSE))
+
+barplot_tax
+
+#Plot tiff
+ggsave(filename = "./05_final_figures/suppl_fig3_a.tiff",
+     width=6,
+     height=6,
+     dpi=300,
+     device="tiff")
+```
+
+### Module B genera level clustered by organ and pond
+```{r, echo=FALSE, fig.width=10, fig.height=7}
+# Input table
+table <- read.table(file = "./01_main_figures/03_sumtax_0.01/genus.txt",
+                    header = TRUE,
+                    sep = "\t")
+
+# Colors
+colourCount = length(unique(table$taxa))
+getPalette = colorRampPalette(brewer.pal(9, "Set3"))
+
+# Barplot
+barplot_tax <- ggplot(table) +
+geom_col(aes(x = pond,
+    y = value,
+    fill = taxa)) +
+facet_grid(~organ) +
+labs(x = "",
+    y = "Relative abundance",
+    fill = "Genera") +
+scale_x_discrete(expand = c(0, 0)) +
+scale_y_continuous(limits = c(0, 1.01),
+    expand = c(0, 0)) +
+scale_fill_manual(values = getPalette(colourCount)) +
+theme_test() +
+theme(text = element_text(size = 15),
+    axis.text.x = element_text(size = 14,
+        angle = 45,
+        hjust = 1),
+    legend.title = element_text(size = 15,
+    hjust = 0.5),
+    legend.key.height = unit(1, "line"),
+    legend.key.width = unit(1, "line")) +
+guides(fill = guide_legend(ncol = 3, byrow = FALSE))
+
+barplot_tax
+
+#Plot tiff
+ggsave(filename = "./05_final_figures/suppl_fig3_b.tiff",
+     width=10,
+     height=7,
+     dpi=300,
+     device="tiff")
+```
+
+
+## Supplementary figure 4: LEfSe of taxonomical classification contrasting gut and hepatopancreas samples
+```{r, echo=FALSE, fig.width=7, fig.height=7}
+# Data input
+table <- read.table(file = "./02_supplementary_figures/04_lefse_tax_organs/organ_lefse_taxa.txt",
+                    sep = "\t",
+                    header = T)
+
+# Define colors
+colors <- c("darkviolet", "mediumseagreen")
+
+# Barplot
+barplot <- ggplot(data = table,
+    aes(x = reorder(organ_taxa, -order),
+    y = lda,
+    fill = group)) +
+geom_bar(stat = "identity") +
+theme_test() +
+scale_fill_manual(values = colors) +
+labs(x = "",
+    y = "LDA SCORE (log 10)",
+    fill = "Associated\ngroup") +
+theme(legend.position = "top") +
+coord_flip(ylim = c(2, 5),
+           expand = c(0, 0)) +
+theme(text = element_text(size = 12),
+    axis.title.x = element_text(size = 12),
+    axis.text.y = element_text(size = 6),
+    legend.title = element_text(size = 10,
+        vjust = 1, hjust = 0.5))
+
+barplot
+
+#Plot tiff
+ggsave(filename = "./05_final_figures/suppl_fig4.tiff",
+     width=7,
+     height=7,
+     dpi=300,
+     device="tiff")
+```
+
+## Supplementary figure 5: LEfSe of PICRUSt predicted functions contrasting gut and hepatopancreas samples. KEGG level 3
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Data input
+table <- read.table(file = "./02_supplementary_figures/05_lefse_picrust_organs/organ_lefse_picrust_l3.txt",
+                    sep = "\t",
+                    header = T)
+
+# Define colors
+colors <- c("darkviolet", "mediumseagreen")
+
+# Barplot
+barplot <- ggplot(data = table,
+    aes(x = reorder(organ_function, -order),
+    y = lda,
+    fill = group)) +
+geom_bar(stat = "identity") +
+theme_test() +
+scale_fill_manual(values = colors) +
+labs(x = "",
+    y = "LDA SCORE (log 10)",
+    fill = "Associated\ngroup") +
+theme(legend.position = "top") +
+coord_flip(ylim = c(1.99, 2.9),
+           expand = c(0, 0)) +
+theme(text = element_text(size = 12),
+    axis.title.x = element_text(size = 12),
+    axis.text.y = element_text(size = 6),
+    legend.title = element_text(size = 10,
+        vjust = 1, hjust = 0.5))
+
+barplot
+
+#Plot tiff
+ggsave(filename = "./05_final_figures/suppl_fig5.tiff",
+     width=5,
+     height=5,
+     dpi=300,
+     device="tiff")
+```
+
+## Supplementary figure 6: LEfSe of PICRUSt predicted functions contrasting gut samples between genetics. A) KEGG level 2 and B) KEGG level 3.
+
+
+## Supplementary figure 7: Venn diagrams of shared OTUs contrasting genetics. A) Intestine samples and B) hepatopancreas samples
+```{r , fig.align="center", echo=FALSE}
+grid.raster(readTIFF("./05_final_figures/suppl_fig7.tiff"))
+```
+
+
+## Supplementary figure 8: Alpha diversity and niche breadth contrasting genetics between intestine samples
+### Module A Chao1
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Data input
+alpha_data <- read.table(file = "./01_main_figures/07_adiv_niche_breadht_gut/gut_all_metrics.txt",
+                         sep = "\t",
+                         header = T)
+
+# Define colors
+colors <- c("royalblue", "orangered")
+p_value <- list(c("Genetic 1", "Genetic 2"))
+
+### chao1
+boxplot <- ggplot(alpha_data, aes(x = group, y = chao1)) +
+geom_boxplot(aes(color = group),
+    outlier.shape = NA) +
+geom_point(aes(color = group),
+    size = 2,
+    shape = 21,
+    position = position_jitterdodge()) +
+theme_test() +
+theme(legend.position = "none") +
+labs(x = "",
+    y = "Chao1 Index") +
+scale_color_manual(values = colors) +
+theme(text = element_text(size=12),
+    axis.title.y = element_text(size=12)) +
+stat_compare_means(comparisons = p_value,
+                   method = "wilcox.test") +
+theme(text = element_text(size=12),
+      axis.title.y = element_text(size=12))
+
+boxplot
+
+#Plot tiff
+ggsave(filename = "./05_final_figures/suppl_fig8_a.tiff",
+     width=5,
+     height=5,
+     dpi=300,
+     device="tiff")
+```
+
+### Module B Shannon
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+### Shannon ###
+boxplot <- ggplot(alpha_data, aes(x = group, y = shannon)) +
+geom_boxplot(aes(color = group),
+    outlier.shape = NA) +
+geom_point(aes(color = group),
+    size = 2,
+    shape = 21,
+    position = position_jitterdodge()) +
+theme_test() +
+theme(legend.position = "none") +
+labs(x = "",
+    y = "Shannon Index") +
+scale_color_manual(values = colors) +
+theme(text = element_text(size=12),
+    axis.title.y = element_text(size=12)) +
+stat_compare_means(comparisons = p_value,
+                   method = "wilcox.test") +
+theme(text = element_text(size=12),
+      axis.title.y = element_text(size=12))
+
+boxplot
+
+#Plot tiff
+ggsave(filename = "./05_final_figures/suppl_fig8_b.tiff",
+     width=5,
+     height=5,
+     dpi=300,
+     device="tiff")
+```
+
+
+### Module C niche breadth
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Data input
+table <- read.delim(file = "./01_main_figures/07_adiv_niche_breadht_gut/values_niche_widht_otu_table_s_0.01_gut_genetics.txt",
+    header = TRUE)
+
+# Define colors and variables
+colors <- c("royalblue", "orangered")
+p_value <- list(c("Genetic 1", "Genetic 2"))
+
+# Plot
+barplot_niche <- ggplot(table,
+    aes(x = group,
+        y = value),
+        fill = group) +
+geom_boxplot(aes(color = group),
+    outlier.shape = NA) +
+geom_point(aes(color = group),
+    size = 2,
+    shape = 21,
+    position = position_jitterdodge()) +
+theme_test() +
+theme(legend.position = "none") +
+labs(x = "",
+    y = "Niche breadth") +
+scale_color_manual(values = colors) +
+theme(text = element_text(size=12),
+    axis.title.y = element_text(size=12)) +
+stat_compare_means(comparisons = p_value,
+                   method = "wilcox.test") +
+theme(text = element_text(size=12),
+      axis.title.y = element_text(size=12))
+
+barplot_niche
+
+#Plot tiff
+ggsave(filename = "./05_final_figures/suppl_fig8_c.tiff",
+     width=5,
+     height=5,
+     dpi=300,
+     device="tiff")
+```
+
+### Supplementary figure 9: Alpha diversity and niche breadth contrasting genetics between hepatopancreas samples; A) Chao1 and B) Shannon and C) niche breadth.
+### Module A Chao1
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Data input
+alpha_data <- read.table(file = "./01_main_figures/08_adiv_niche_breadht_hep/hep_all_metrics.txt",
+                         sep = "\t",
+                         header = T)
+
+# Define colors
+colors <- c("royalblue", "orangered")
+p_value <- list(c("Genetic 1", "Genetic 2"))
+
+### chao1
+boxplot <- ggplot(alpha_data, aes(x = group, y = chao1)) +
+geom_boxplot(aes(color = group),
+    outlier.shape = NA) +
+geom_point(aes(color = group),
+    size = 2,
+    shape = 21,
+    position = position_jitterdodge()) +
+theme_test() +
+theme(legend.position = "none") +
+labs(x = "",
+    y = "Chao1 Index") +
+scale_color_manual(values = colors) +
+theme(text = element_text(size=12),
+    axis.title.y = element_text(size=12)) +
+stat_compare_means(comparisons = p_value,
+                   method = "wilcox.test") +
+theme(text = element_text(size=12),
+      axis.title.y = element_text(size=12))
+
+boxplot
+
+#Plot tiff
+ggsave(filename = "./05_final_figures/suppl_fig9_a.tiff",
+     width=5,
+     height=5,
+     dpi=300,
+     device="tiff")
+```
+
+### Module B Shannon
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+### Shannon ###
+boxplot <- ggplot(alpha_data, aes(x = group, y = shannon)) +
+geom_boxplot(aes(color = group),
+    outlier.shape = NA) +
+geom_point(aes(color = group),
+    size = 2,
+    shape = 21,
+    position = position_jitterdodge()) +
+theme_test() +
+theme(legend.position = "none") +
+labs(x = "",
+    y = "Shannon Index") +
+scale_color_manual(values = colors) +
+theme(text = element_text(size=12),
+    axis.title.y = element_text(size=12)) +
+stat_compare_means(comparisons = p_value,
+                   method = "wilcox.test") +
+theme(text = element_text(size=12),
+      axis.title.y = element_text(size=12))
+
+boxplot
+
+#Plot tiff
+ggsave(filename = "./05_final_figures/suppl_fig9_b.tiff",
+     width=5,
+     height=5,
+     dpi=300,
+     device="tiff")
+```
+
+### Module C niche breadth
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Data input
+table <- read.delim(file = "./01_main_figures/08_adiv_niche_breadht_hep/values_niche_widht_otu_table_s_0.01_hep_genetics.txt",
+    header = TRUE)
+
+# Define colors and variables
+colors <- c("royalblue", "orangered")
+p_value <- list(c("Genetic 1", "Genetic 2"))
+
+# Plot
+barplot_niche <- ggplot(table,
+    aes(x = group,
+        y = value),
+        fill = group) +
+geom_boxplot(aes(color = group),
+    outlier.shape = NA) +
+geom_point(aes(color = group),
+    size = 2,
+    shape = 21,
+    position = position_jitterdodge()) +
+theme_test() +
+theme(legend.position = "none") +
+labs(x = "",
+    y = "Niche breadth") +
+scale_color_manual(values = colors) +
+theme(text = element_text(size=12),
+    axis.title.y = element_text(size=12)) +
+stat_compare_means(comparisons = p_value,
+                   method = "wilcox.test") +
+theme(text = element_text(size=12),
+      axis.title.y = element_text(size=12))
+
+barplot_niche
+
+#Plot tiff
+ggsave(filename = "./05_final_figures/suppl_fig9_c.tiff",
+     width=5,
+     height=5,
+     dpi=300,
+     device="tiff")
+```
+
+
+## Supplementary figure 10: Probiotics constrasting between organs and genetics
+### Module A: Barplots with probiotics genera-level
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Barplot probiotics, only intestine samples
+probiotics_gut_genera <- data.frame(
+  group=c("Intestine\nGenetic 1",
+         "Intestine\nGenetic 2",
+         "Hepatopancreas\nGenetic 1",
+         "Hepatopancreas\nGenetic 2"),
+  value=c(0.373722,
+          0.320628,
+          0.344285,
+          0.290699)
+  )
+
+# Define colors
+colors <- c("darkviolet", "mediumseagreen",
+            "darkviolet", "mediumseagreen")
+
+# Heatmap
+barplot <- ggplot(data = probiotics_gut_genera,
+    aes(x = value,
+    y = group,
+    fill = group)) +
+geom_bar(stat = "identity") +
+  coord_flip() +
+  scale_fill_manual(values = colors) +
+theme_test() +
+  scale_x_continuous(limits = c(0, 0.45),
+                     expand = c(0, 0)) +
+labs(x = "Relative abundance",
+    y = "",
+    title = "Genera-level probiotics") +
+theme(legend.position = "none",
+      text = element_text(size=12),
+      axis.title.y = element_text(size=12),
+      plot.title = element_text(hjust = 0.5))
+
+barplot
+
+#Plot tiff
+ggsave(filename = "./05_final_figures/suppl_fig10_a.tiff",
+     width=5,
+     height=5,
+     dpi=300,
+     device="tiff")
+```
+
+### Module B: Barplots with probiotics species-level
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Barplot probiotics, only intestine samples
+probiotics_gut_species <- data.frame(
+  group=c("Intestine\nGenetic 1",
+         "Intestine\nGenetic 2",
+         "Hepatopancreas\nGenetic 1",
+         "Hepatopancreas\nGenetic 2"),
+  value=c(0.002824,
+          0.001605,
+          0.007651,
+          0.001657)
+  )
+
+# Define colors
+colors <- c("darkviolet", "mediumseagreen",
+            "darkviolet", "mediumseagreen")
+
+# Heatmap
+barplot <- ggplot(data = probiotics_gut_species,
+    aes(x = value,
+    y = group,
+    fill = group)) +
+geom_bar(stat = "identity") +
+  coord_flip() +
+  scale_fill_manual(values = colors) +
+theme_test() +
+  scale_x_continuous(limits = c(0, 0.008),
+                     expand = c(0, 0)) +
+labs(x = "Relative abundance",
+     y = "",
+     title = "Species-level probiotics") +
+theme(legend.position = "none",
+      text = element_text(size=12),
+      axis.title.y = element_text(size=12),
+      plot.title = element_text(hjust = 0.5))
+
+barplot
+
+#Plot tiff
+ggsave(filename = "./05_final_figures/suppl_fig10_b.tiff",
+     width=5,
+     height=5,
+     dpi=300,
+     device="tiff")
+```
