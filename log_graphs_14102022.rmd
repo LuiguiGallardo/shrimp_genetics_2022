@@ -508,7 +508,7 @@ labs(x = "",
     title = "Intestine") +
 theme(text = element_text(size = 12),
     axis.title.x = element_text(size = 12),
-    axis.text.y = element_text(size = 7,
+    axis.text.y = element_text(size = 6,
         vjust = 0.25),
     axis.text.x = element_text(angle = 90,
                                vjust = 0.5),
@@ -549,8 +549,8 @@ ggarrange(heatmap,
 
 #Plot tiff
 ggsave(filename = "05_final_figures/fig3_a.tiff",
-       width=5,
-       height=5,
+       width=6,
+       height=6,
        dpi=300,
        device="tiff")
 ```
@@ -630,8 +630,8 @@ ggarrange(heatmap,
 
 #Plot tiff
 ggsave(filename = "05_final_figures/fig3_b.tiff",
-       width=5,
-       height=5,
+       width=6,
+       height=6,
        dpi=300,
        device="tiff")
 ```
