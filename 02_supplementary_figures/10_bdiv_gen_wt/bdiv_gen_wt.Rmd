@@ -1,0 +1,95 @@
+---
+title: "bdiv_gen_wt"
+output: pdf_document
+date: "2024-09-03"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library("ggplot2")
+```
+
+## Beta diversity Genetics vs WT
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+create_pcoa_plot <- function(file_path, pcx_value, pcy_value, anosim, pvalue, output_file) {
+    # Load necessary library
+    library("optparse")
+    library("ggplot2")
+library("reshape")
+require("gridExtra")
+library("ggpubr")
+library("ggh4x")
+library("dplyr")
+library("rstatix")
+library("vegan")
+    
+    # Data input
+    data <- read.table(file = file_path, header = TRUE, sep = '\t')
+    
+    group <- data$Group
+    
+    # Define colors
+    colors <- c("royalblue", "orangered", "darkviolet", "mediumseagreen")
+    
+    # Define shapes
+    shapes <- c(15, 16, 17, 18)
+    
+    # Creation of the graph
+    theme_set(theme_bw())
+    graph <- ggplot(data, aes(x = pc1, y = pc2)) +
+        geom_point(aes(col = group, shape = group), size = 3) +
+      stat_chull(aes(colour = group,
+               fill = group),
+          alpha = 0.1,
+          geom = "polygon") +
+        scale_color_manual(values = colors) +
+scale_shape_manual(values = shapes) +
+  scale_fill_manual(values = colors) +
+        labs(x = paste0("PC1 (", pcx_value, "%)"),
+             y = paste0("PC2 (", pcy_value, "%)"),
+             subtitle = paste0("ANOSIM=", anosim, "; p-value=", pvalue),
+             title = "") +
+        geom_hline(yintercept=0,
+                   color = "gray") +
+        geom_vline(xintercept=0,
+                   color = "gray") +
+  theme(legend.title = element_blank(),
+        legend.position = c(0.5, 1.1),
+        legend.direction = "horizontal",
+        legend.background = element_blank(),
+        legend.text = element_text(size=11),
+        axis.text.x = element_text(size=12),
+        axis.text.y = element_text(size=12),
+        axis.title.x = element_text(size=12),
+        axis.title.y = element_text(size=12),
+        plot.subtitle = element_text(hjust = 0.5,
+                                     vjust = -1))
+    # Save the plot as pdf
+    ggsave(paste0(output_file, ".pdf"), plot = graph, width = 5, height = 5, units = "in")
+    
+    # Save the plot as TIFF
+    ggsave(paste0(output_file, ".tiff"), plot = graph, width = 5, height = 5, units = "in", dpi = 300)
+    
+    return(graph)
+}
+```
+
+# Unweighted unifrac pc1 vs pc2
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+create_pcoa_plot("./unweighted_pcoa_data.tsv",
+                 "24.64",
+                 "14.34",
+                 "0.5476",
+                 "0.001",
+                 "./unweighted_pcoa_wt_gen")
+```
+
+# Weighted unifrac pc1 vs pc2
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+create_pcoa_plot("./weighted_pcoa_data.tsv",
+                 "36.39",
+                 "23.76",
+                 "0.3206",
+                 "0.001",
+                 "./weighted_pcoa_wt_gen")
+```
