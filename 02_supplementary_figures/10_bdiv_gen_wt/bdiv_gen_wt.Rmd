@@ -29,10 +29,10 @@ library("vegan")
     group <- data$Group
     
     # Define colors
-    colors <- c("royalblue", "orangered", "darkviolet", "mediumseagreen")
+    colors <- c("royalblue", "orangered", "darkviolet")
     
     # Define shapes
-    shapes <- c(15, 16, 17, 18)
+    shapes <- c(15, 16, 17)
     
     # Creation of the graph
     theme_set(theme_bw())
