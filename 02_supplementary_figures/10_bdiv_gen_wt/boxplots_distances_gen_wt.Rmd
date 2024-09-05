@@ -1,0 +1,112 @@
+---
+title: "unweighted_centroids_gen_wt"
+output: pdf_document
+date: "2024-09-03"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library("vegan")
+library("ggplot2")
+library("ggrepel")
+library("ggpubr")
+```
+
+## Distance to centroids 08_wt_vann_wt_gen
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+plot_boxplots <- function(input_file, colors, groups_to_compare, output_file) {
+  # Load necessary libraries
+  library("vegan")
+  library("ggplot2")
+  library(tidyr)
+  library(dplyr)
+  
+  # Read the table
+  data <- read.table(file = input_file,
+                     sep = '\t',
+                     header = TRUE)
+  
+  data[] <- lapply(data, function(x) as.numeric(as.character(x)))
+  
+  # Reshape the data to long format
+  long_data <- data %>%
+    pivot_longer(cols = everything(), names_to = "Comparison", values_to = "Value")
+  
+  # Generate the boxplot
+  boxplot <- ggplot(long_data, aes(x = Comparison, y = Value)) +
+    geom_boxplot(aes(color = Comparison), outlier.shape = NA) +
+    geom_point(aes(color = Comparison), size = 2, shape = 21, position = position_jitterdodge()) +
+    theme_minimal() +
+    theme(legend.position = "none") +  # Remove legend
+    ylab(NULL) +  # Remove y-axis title
+    labs(title = "", y = "Distance", x = "") +
+    scale_color_manual(values = colors) +
+    stat_compare_means(comparisons = groups_to_compare, method = "wilcox.test", digits=4) +
+    theme(text = element_text(size = 12), axis.title.y = element_text(size = 12))
+  
+  # Save the plot as pdf
+  ggsave(paste0(output_file, ".pdf"), plot = boxplot, width = 5, height = 5, units = "in")
+
+  # Save the plot as TIFF
+  ggsave(paste0(output_file, ".tiff"), plot = boxplot, width = 5, height = 5, units = "in", dpi = 300)
+  
+  return(boxplot)
+}
+
+```
+
+### Distance centroids unweighted Gen1 vs wt
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+colors <- c("royalblue", "darkviolet", "mediumseagreen")
+
+groups_to_compare <- list(c("Gen2.vs.Gen1", "WT.vs.Gen1"),
+                          c("Gen2.vs.Gen1", "WT.vs.Gen2"),
+                          c("WT.vs.Gen1", "WT.vs.Gen2"))
+
+plot_boxplots("./unweighted_unifrac_distances_gen_wt.tsv",
+              colors,
+              groups_to_compare,
+              "./unweighted_unifrac_distances_gen_wt")
+
+```
+
+### Distance centroids unweighted Gen1 vs wt, filtered
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+colors <- c("royalblue", "darkviolet")
+
+groups_to_compare <- list(c("WT.vs.Gen1", "WT.vs.Gen2"))
+
+plot_boxplots("./unweighted_unifrac_distances_gen_wt_filt.tsv",
+              colors,
+              groups_to_compare,
+              "./unweighted_unifrac_distances_gen_wt_filt")
+
+```
+
+### Distance centroids weighted Gen1 vs wt
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+colors <- c("royalblue", "darkviolet", "mediumseagreen")
+
+groups_to_compare <- list(c("Gen2.vs.Gen1", "WT.vs.Gen1"),
+                          c("Gen2.vs.Gen1", "WT.vs.Gen2"),
+                          c("WT.vs.Gen1", "WT.vs.Gen2"))
+
+plot_boxplots("./weighted_unifrac_distances_gen_wt.tsv",
+              colors,
+              groups_to_compare,
+              "./weighted_unifrac_distances_gen_wt")
+
+```
+
+### Distance centroids unweighted Gen1 vs wt, filtered
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+colors <- c("royalblue", "darkviolet")
+
+groups_to_compare <- list(c("WT.vs.Gen1", "WT.vs.Gen2"))
+
+plot_boxplots("./weighted_unifrac_distances_gen_wt_filt.tsv",
+              colors,
+              groups_to_compare,
+              "./weighted_unifrac_distances_gen_wt_filt")
+
+```

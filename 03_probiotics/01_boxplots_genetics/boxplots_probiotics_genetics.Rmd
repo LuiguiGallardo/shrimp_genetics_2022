@@ -160,7 +160,7 @@ generate_probiotics_boxplot(data_file = "./wt_probiotics.tsv",
 ```{r, echo=FALSE, fig.width=5, fig.height=5}
 # Gut wt probiotics species
 generate_probiotics_boxplot(data_file = "./wt_probiotics.tsv", 
-                            comparison = "relab_gut_genus",
+                            comparison = "relab_gut_species",
                             groups_to_compare = list(c("Healthy", "Disease")),
                             y_axis = "Relative abundance",
                             output_file = "./species_wt_probiotics")
@@ -170,7 +170,7 @@ generate_probiotics_boxplot(data_file = "./wt_probiotics.tsv",
 ```{r, echo=FALSE, fig.width=5, fig.height=5}
 # Gut wt probiotics species log10
 generate_probiotics_boxplot(data_file = "./wt_probiotics.tsv", 
-                            comparison = "log10_gut_genus",
+                            comparison = "log10_gut_species",
                             groups_to_compare = list(c("Healthy", "Disease")),
                             y_axis = "Relative abundance (log10)",
                             output_file = "./log_species_wt_probiotics")
