@@ -1,0 +1,193 @@
+---
+title: "boxplots_probiotics_genetics"
+output: pdf_document
+date: "2024-09-03"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library("optparse")
+library("ggplot2")
+library("reshape")
+require("gridExtra")
+library("ggpubr")
+library("ggh4x")
+library("dplyr")
+library("rstatix")
+library("vegan")
+```
+
+## Boxplots probiotics gut
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Boxplot function definition
+generate_probiotics_boxplot <- function(data_file, comparison, groups_to_compare, colors, y_axis, output_file) {
+  # Load necessary libraries
+  library("ggplot2")
+  library("ggpubr")
+  library("dplyr")
+  
+  # Read the data
+  data <- read.table(file = data_file, sep = "\t", header = TRUE)
+  
+  data$group <- factor(data$group, levels = unique(data$group))
+  
+  # Define colors
+  colors <- colors
+  
+  # Create the boxplot
+  probiotics_boxplot <- ggplot(data, aes(x = group, y = !!sym(comparison))) +
+    geom_boxplot(aes(color = group), outlier.shape = NA) +
+    geom_point(aes(color = group), size = 2, shape = 21, position = position_jitterdodge()) +
+    theme_test() +
+    theme(legend.position = "none") +
+    labs(x = "", y = y_axis) +
+    scale_color_manual(values = colors) +
+    theme(text = element_text(size = 12), axis.title.y = element_text(size = 12)) +
+    stat_compare_means(comparisons = groups_to_compare, method = "wilcox.test", digits=4)
+  
+  # Save the plot as pdf
+  ggsave(paste0(output_file, ".pdf"), plot = probiotics_boxplot, width = 5, height = 5, units = "in")
+  
+  # Save the plot as TIFF
+  ggsave(paste0(output_file, ".tiff"), plot = probiotics_boxplot, width = 5, height = 5, units = "in", dpi = 300)
+
+  # Show the plot
+  probiotics_boxplot
+}
+```
+
+## Metacomunity Gut & Hepatopancreas
+### Metacommunity Gut & Hepatopancreas Observed OTUs
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Gut probiotics genus
+generate_probiotics_boxplot(data_file = "./adiv_metrics_both_organs.tsv", 
+                            comparison = "observed_otus_allprobiotics",
+                            groups_to_compare = list(c("Gen1", "Gen2")),
+                            colors = c("royalblue", "orangered"),
+                            y_axis = "Observed",
+                            output_file = "./organs_observed_otus_allprobiotics")
+```
+
+### Metacommunity Gut & Hepatopancreas Chao1
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Gut probiotics genus
+generate_probiotics_boxplot(data_file = "./adiv_metrics_both_organs.tsv", 
+                            comparison = "chao1_allprobiotics",
+                            groups_to_compare = list(c("Gen1", "Gen2")),
+                            colors = c("royalblue", "orangered"),
+                            y_axis = "Chao1",
+                            output_file = "./organs_chao1_allprobiotics")
+```
+
+### Metacommunity Gut & Hepatopancreas Shannon
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Gut probiotics genus
+generate_probiotics_boxplot(data_file = "./adiv_metrics_both_organs.tsv", 
+                            comparison = "shannon_allprobiotics",
+                            groups_to_compare = list(c("Gen1", "Gen2")),
+                            colors = c("royalblue", "orangered"),
+                            y_axis = "Shannon",
+                            output_file = "./organs_shannon_allprobiotics")
+```
+
+## Metacommunity Gut
+### Metacommunity Gut Observed OTUs
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Gut probiotics genus
+generate_probiotics_boxplot(data_file = "./adiv_metrics_gut.tsv", 
+                            comparison = "observed_otus_allprobiotics",
+                            groups_to_compare = list(c("Gen1", "Gen2")),
+                            colors = c("royalblue", "orangered"),
+                            y_axis = "Observed",
+                            output_file = "./gut_observed_otus_allprobiotics")
+```
+
+### Metacommunity Gut Chao1
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Gut probiotics genus
+generate_probiotics_boxplot(data_file = "./adiv_metrics_gut.tsv", 
+                            comparison = "chao1_allprobiotics",
+                            groups_to_compare = list(c("Gen1", "Gen2")),
+                            colors = c("royalblue", "orangered"),
+                            y_axis = "Chao1",
+                            output_file = "./gut_chao1_allprobiotics")
+```
+
+### Metacommunity Gut Shannon
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Gut probiotics genus
+generate_probiotics_boxplot(data_file = "./adiv_metrics_gut.tsv", 
+                            comparison = "shannon_allprobiotics",
+                            groups_to_compare = list(c("Gen1", "Gen2")),
+                            colors = c("royalblue", "orangered"),
+                            y_axis = "Shannon",
+                            output_file = "./gut_shannon_allprobiotics")
+```
+
+## Metacommunity Hepatopancreas
+### Metacommunity Hepatopancreas Observed OTUs
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Gut probiotics genus
+generate_probiotics_boxplot(data_file = "./adiv_metrics_hep.tsv", 
+                            comparison = "observed_otus_allprobiotics",
+                            groups_to_compare = list(c("Gen1", "Gen2")),
+                            colors = c("royalblue", "orangered"),
+                            y_axis = "Observed",
+                            output_file = "./hep_observed_otus_allprobiotics")
+```
+
+### Metacommunity Hepatopancreas Chao1
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Gut probiotics genus
+generate_probiotics_boxplot(data_file = "./adiv_metrics_hep.tsv", 
+                            comparison = "chao1_allprobiotics",
+                            groups_to_compare = list(c("Gen1", "Gen2")),
+                            colors = c("royalblue", "orangered"),
+                            y_axis = "Chao1",
+                            output_file = "./hep_chao1_allprobiotics")
+```
+
+### Metacommunity Hepatopancreas Shannon
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Gut probiotics genus
+generate_probiotics_boxplot(data_file = "./adiv_metrics_hep.tsv", 
+                            comparison = "shannon_allprobiotics",
+                            groups_to_compare = list(c("Gen1", "Gen2")),
+                            colors = c("royalblue", "orangered"),
+                            y_axis = "Shannon",
+                            output_file = "./hep_shannon_allprobiotics")
+```
+
+## Metacommunity Healthy vs Diseased
+### Metacommunity Healthy vs Diseased Observed OTUs
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Gut probiotics genus
+generate_probiotics_boxplot(data_file = "./adiv_metrics_ems.tsv", 
+                            comparison = "observed_otus_allprobiotics",
+                            groups_to_compare = list(c("Healthy", "Disease")),
+                            colors <- c("darkviolet", "mediumseagreen"),
+                            y_axis = "Observed",
+                            output_file = "./ems_observed_otus_allprobiotics")
+```
+
+### Metacommunity Healthy vs Diseased Chao1
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Gut probiotics genus
+generate_probiotics_boxplot(data_file = "./adiv_metrics_ems.tsv", 
+                            comparison = "chao1_allprobiotics",
+                            groups_to_compare = list(c("Healthy", "Disease")),
+                            colors <- c("darkviolet", "mediumseagreen"),
+                            y_axis = "Chao1",
+                            output_file = "./ems_chao1_allprobiotics")
+```
+
+### Metacommunity Healthy vs Diseased Shannon
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Gut probiotics genus
+generate_probiotics_boxplot(data_file = "./adiv_metrics_ems.tsv", 
+                            comparison = "shannon_allprobiotics",
+                            groups_to_compare = list(c("Healthy", "Disease")),
+                            colors <- c("darkviolet", "mediumseagreen"),
+                            y_axis = "Shannon",
+                            output_file = ".ems_shannon_allprobiotics")
+```

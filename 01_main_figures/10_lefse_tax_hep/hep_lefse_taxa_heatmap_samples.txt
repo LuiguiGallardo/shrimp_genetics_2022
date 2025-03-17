@@ -1,311 +1,311 @@
 sample	group	variable	value	order
-HA1	Genetic 2	c_Spartobacteria	-5	12
-HA1	Genetic 2	g_Brevibacterium	-5	2
-HA1	Genetic 2	g_Candidatus Xiphinematobacter	-5	1
-HA1	Genetic 2	g_Corynebacterium	-5	9
-HA1	Genetic 2	o_Aeromonadales	-3.212271097	4
-HA1	Genetic 2	o_Chthoniobacterales	-5	7
-HA1	Genetic 2	o_Clostridiales	-5	6
-HA1	Genetic 2	p_Synergistetes	-2.5190027	11
-HA1	Genetic 2	f_Brevibacteriaceae	-5	8
-HA1	Genetic 2	f_Chthoniobacteraceae	-5	3
-HA1	Genetic 2	f_Corynebacteriaceae	-5	10
-HA1	Genetic 2	f_Aeromonadaceae	-5	5
-HA1	Genetic 2	c_Oscillatoriophycideae	-1.194036101	16
-HA1	Genetic 2	c_Synergistia	-2.519002644	31
-HA1	Genetic 2	g_Arthrospira	-2.615554109	23
-HA1	Genetic 2	g_Desulfovibrio	-2.042839016	22
-HA1	Genetic 2	g_Hydrocoleum	-2.91479579	26
-HA1	Genetic 2	g_Lyngbya	-3.384836175	25
-HA1	Genetic 2	g_Phormidium	-2.993263624	27
-HA1	Genetic 2	g_Planktothricoides	-5	19
-HA1	Genetic 2	g_Trichodesmium	-3.089106245	20
-HA1	Genetic 2	o_Desulfovibrionales	-2.042839016	21
-HA1	Genetic 2	o_Oscillatoriales	-1.261882833	15
-HA1	Genetic 2	o_Synergistales	-2.519002644	28
-HA1	Genetic 2	p_Verrucomicrobia	-5	29
-HA1	Genetic 2	s_Arthrospira platensis	-2.615554165	13
-HA1	Genetic 2	s_Lyngbya hieronymusii	-3.384836581	17
-HA1	Genetic 2	s_Propionibacterium acnes	-3.212271152	18
-HA1	Genetic 2	f_Desulfovibrionaceae	-2.042839016	24
-HA1	Genetic 2	f_Thermovirgaceae	-2.519002644	30
-HA1	Genetic 2	f_Phormidiaceae	-1.261882833	14
-HA2	Genetic 2	c_Spartobacteria	-5	12
-HA2	Genetic 2	g_Brevibacterium	-3.658106691	2
-HA2	Genetic 2	g_Candidatus Xiphinematobacter	-5	1
-HA2	Genetic 2	g_Corynebacterium	-5	9
-HA2	Genetic 2	o_Aeromonadales	-3.488655498	4
-HA2	Genetic 2	o_Chthoniobacterales	-5	7
-HA2	Genetic 2	o_Clostridiales	-2.862248811	6
-HA2	Genetic 2	p_Synergistetes	-3.272191369	11
-HA2	Genetic 2	f_Brevibacteriaceae	-3.658106691	8
-HA2	Genetic 2	f_Chthoniobacteraceae	-5	3
-HA2	Genetic 2	f_Corynebacteriaceae	-5	10
-HA2	Genetic 2	f_Aeromonadaceae	-3.658106691	5
-HA2	Genetic 2	c_Oscillatoriophycideae	-1.397194477	16
-HA2	Genetic 2	c_Synergistia	-3.272191254	31
-HA2	Genetic 2	g_Arthrospira	-2.862248811	23
-HA2	Genetic 2	g_Desulfovibrio	-2.698438319	22
-HA2	Genetic 2	g_Hydrocoleum	-3.367074246	26
-HA2	Genetic 2	g_Lyngbya	-3.488655498	25
-HA2	Genetic 2	g_Phormidium	-3.367074246	27
-HA2	Genetic 2	g_Planktothricoides	-3.488655498	19
-HA2	Genetic 2	g_Trichodesmium	-3.272191254	20
-HA2	Genetic 2	o_Desulfovibrionales	-2.698438319	21
-HA2	Genetic 2	o_Oscillatoriales	-1.416959926	15
-HA2	Genetic 2	o_Synergistales	-3.272191254	28
-HA2	Genetic 2	p_Verrucomicrobia	-3.939809365	29
-HA2	Genetic 2	s_Arthrospira platensis	-2.8622488	13
-HA2	Genetic 2	s_Lyngbya hieronymusii	-3.488655076	17
-HA2	Genetic 2	s_Propionibacterium acnes	-3.128391807	18
-HA2	Genetic 2	f_Desulfovibrionaceae	-2.698438319	24
-HA2	Genetic 2	f_Thermovirgaceae	-3.272191254	30
-HA2	Genetic 2	f_Phormidiaceae	-1.416959926	14
-HA5	Genetic 2	c_Spartobacteria	-5	12
-HA5	Genetic 2	g_Brevibacterium	-5	2
-HA5	Genetic 2	g_Candidatus Xiphinematobacter	-5	1
-HA5	Genetic 2	g_Corynebacterium	-5	9
-HA5	Genetic 2	o_Aeromonadales	-2.861259438	4
-HA5	Genetic 2	o_Chthoniobacterales	-5	7
-HA5	Genetic 2	o_Clostridiales	-3.225049686	6
-HA5	Genetic 2	p_Synergistetes	-5	11
-HA5	Genetic 2	f_Brevibacteriaceae	-5	8
-HA5	Genetic 2	f_Chthoniobacteraceae	-5	3
-HA5	Genetic 2	f_Corynebacteriaceae	-5	10
-HA5	Genetic 2	f_Aeromonadaceae	-5	5
-HA5	Genetic 2	c_Oscillatoriophycideae	-0.908772074	16
-HA5	Genetic 2	c_Synergistia	-5	31
-HA5	Genetic 2	g_Arthrospira	-2.593872851	23
-HA5	Genetic 2	g_Desulfovibrio	-3.101937184	22
-HA5	Genetic 2	g_Hydrocoleum	-2.041593189	26
-HA5	Genetic 2	g_Lyngbya	-2.965135012	25
-HA5	Genetic 2	g_Phormidium	-2.707305203	27
-HA5	Genetic 2	g_Planktothricoides	-3.518848432	19
-HA5	Genetic 2	g_Trichodesmium	-1.767262105	20
-HA5	Genetic 2	o_Desulfovibrionales	-3.101937184	21
-HA5	Genetic 2	o_Oscillatoriales	-0.922027589	15
-HA5	Genetic 2	o_Synergistales	-5	28
-HA5	Genetic 2	p_Verrucomicrobia	-3.22504941	29
-HA5	Genetic 2	s_Arthrospira platensis	-2.593872913	13
-HA5	Genetic 2	s_Lyngbya hieronymusii	-2.965135134	17
-HA5	Genetic 2	s_Propionibacterium acnes	-3.68782661	18
-HA5	Genetic 2	f_Desulfovibrionaceae	-3.101937184	24
-HA5	Genetic 2	f_Thermovirgaceae	-5	30
-HA5	Genetic 2	f_Phormidiaceae	-0.922027589	14
-HA7	Genetic 2	c_Spartobacteria	-5	12
-HA7	Genetic 2	g_Brevibacterium	-5	2
-HA7	Genetic 2	g_Candidatus Xiphinematobacter	-5	1
-HA7	Genetic 2	g_Corynebacterium	-5	9
-HA7	Genetic 2	o_Aeromonadales	-3.303118756	4
-HA7	Genetic 2	o_Chthoniobacterales	-5	7
-HA7	Genetic 2	o_Clostridiales	-2.976805587	6
-HA7	Genetic 2	p_Synergistetes	-4.098774494	11
-HA7	Genetic 2	f_Brevibacteriaceae	-5	8
-HA7	Genetic 2	f_Chthoniobacteraceae	-5	3
-HA7	Genetic 2	f_Corynebacteriaceae	-5	10
-HA7	Genetic 2	f_Aeromonadaceae	-3.303118756	5
-HA7	Genetic 2	c_Oscillatoriophycideae	-1.379502558	16
-HA7	Genetic 2	c_Synergistia	-4.098541679	31
-HA7	Genetic 2	g_Arthrospira	-3.150842962	23
-HA7	Genetic 2	g_Desulfovibrio	-2.922932389	22
-HA7	Genetic 2	g_Hydrocoleum	-3.110009577	26
-HA7	Genetic 2	g_Lyngbya	-3.303118756	25
-HA7	Genetic 2	g_Phormidium	-2.502437628	27
-HA7	Genetic 2	g_Planktothricoides	-4.098541679	19
-HA7	Genetic 2	g_Trichodesmium	-3.110009577	20
-HA7	Genetic 2	o_Desulfovibrionales	-2.922932389	21
-HA7	Genetic 2	o_Oscillatoriales	-1.38681231	15
-HA7	Genetic 2	o_Synergistales	-4.098541679	28
-HA7	Genetic 2	p_Verrucomicrobia	-5	29
-HA7	Genetic 2	s_Arthrospira platensis	-3.150843047	13
-HA7	Genetic 2	s_Lyngbya hieronymusii	-3.303118753	17
-HA7	Genetic 2	s_Propionibacterium acnes	-3.445769639	18
-HA7	Genetic 2	f_Desulfovibrionaceae	-2.922932389	24
-HA7	Genetic 2	f_Thermovirgaceae	-4.098541679	30
-HA7	Genetic 2	f_Phormidiaceae	-1.38681231	14
-HA8	Genetic 2	c_Spartobacteria	-5	12
-HA8	Genetic 2	g_Brevibacterium	-5	2
-HA8	Genetic 2	g_Candidatus Xiphinematobacter	-5	1
-HA8	Genetic 2	g_Corynebacterium	-5	9
-HA8	Genetic 2	o_Aeromonadales	-3.468973496	4
-HA8	Genetic 2	o_Chthoniobacterales	-5	7
-HA8	Genetic 2	o_Clostridiales	-3.129276052	6
-HA8	Genetic 2	p_Synergistetes	-3.57447968	11
-HA8	Genetic 2	f_Brevibacteriaceae	-5	8
-HA8	Genetic 2	f_Chthoniobacteraceae	-5	3
-HA8	Genetic 2	f_Corynebacteriaceae	-5	10
-HA8	Genetic 2	f_Aeromonadaceae	-3.714134519	5
-HA8	Genetic 2	c_Oscillatoriophycideae	-2.109299658	16
-HA8	Genetic 2	c_Synergistia	-3.574480452	31
-HA8	Genetic 2	g_Arthrospira	-4.079354999	23
-HA8	Genetic 2	g_Desulfovibrio	-3.108365548	22
-HA8	Genetic 2	g_Hydrocoleum	-3.518530139	26
-HA8	Genetic 2	g_Lyngbya	-3.805460683	25
-HA8	Genetic 2	g_Phormidium	-3.638718017	27
-HA8	Genetic 2	g_Planktothricoides	-4.079354999	19
-HA8	Genetic 2	g_Trichodesmium	-3.468973496	20
-HA8	Genetic 2	o_Desulfovibrionales	-3.108365548	21
-HA8	Genetic 2	o_Oscillatoriales	-2.113410921	15
-HA8	Genetic 2	o_Synergistales	-3.574480452	28
-HA8	Genetic 2	p_Verrucomicrobia	-3.57447968	29
-HA8	Genetic 2	s_Arthrospira platensis	-4.079591205	13
-HA8	Genetic 2	s_Lyngbya hieronymusii	-3.805459537	17
-HA8	Genetic 2	s_Propionibacterium acnes	-4.079591205	18
-HA8	Genetic 2	f_Desulfovibrionaceae	-3.108365548	24
-HA8	Genetic 2	f_Thermovirgaceae	-3.574480452	30
-HA8	Genetic 2	f_Phormidiaceae	-2.113410921	14
-HL1	Genetic 1	c_Spartobacteria	-3.464892046	12
-HL1	Genetic 1	g_Brevibacterium	-4.1837587	2
-HL1	Genetic 1	g_Candidatus Xiphinematobacter	-3.464892046	1
-HL1	Genetic 1	g_Corynebacterium	-5	9
-HL1	Genetic 1	o_Aeromonadales	-3.343132637	4
-HL1	Genetic 1	o_Chthoniobacterales	-3.464892046	7
-HL1	Genetic 1	o_Clostridiales	-2.790810292	6
-HL1	Genetic 1	p_Synergistetes	-5	11
-HL1	Genetic 1	f_Brevibacteriaceae	-4.1837587	8
-HL1	Genetic 1	f_Chthoniobacteraceae	-3.464892046	3
-HL1	Genetic 1	f_Corynebacteriaceae	-5	10
-HL1	Genetic 1	f_Aeromonadaceae	-3.541547993	5
-HL1	Genetic 1	c_Oscillatoriophycideae	-3.248140684	16
-HL1	Genetic 1	c_Synergistia	-5	31
-HL1	Genetic 1	g_Arthrospira	-5	23
-HL1	Genetic 1	g_Desulfovibrio	-5	22
-HL1	Genetic 1	g_Hydrocoleum	-5	26
-HL1	Genetic 1	g_Lyngbya	-5	25
-HL1	Genetic 1	g_Phormidium	-5	27
-HL1	Genetic 1	g_Planktothricoides	-5	19
-HL1	Genetic 1	g_Trichodesmium	-5	20
-HL1	Genetic 1	o_Desulfovibrionales	-5	21
-HL1	Genetic 1	o_Oscillatoriales	-3.399759164	15
-HL1	Genetic 1	o_Synergistales	-5	28
-HL1	Genetic 1	p_Verrucomicrobia	-3.464892621	29
-HL1	Genetic 1	s_Arthrospira platensis	-5	13
-HL1	Genetic 1	s_Lyngbya hieronymusii	-5	17
-HL1	Genetic 1	s_Propionibacterium acnes	-3.046913871	18
-HL1	Genetic 1	f_Desulfovibrionaceae	-5	24
-HL1	Genetic 1	f_Thermovirgaceae	-5	30
-HL1	Genetic 1	f_Phormidiaceae	-3.399759164	14
-HL2	Genetic 1	c_Spartobacteria	-3.077698147	12
-HL2	Genetic 1	g_Brevibacterium	-3.407472394	2
-HL2	Genetic 1	g_Candidatus Xiphinematobacter	-3.077698147	1
-HL2	Genetic 1	g_Corynebacterium	-3.235097163	9
-HL2	Genetic 1	o_Aeromonadales	-2.439794616	4
-HL2	Genetic 1	o_Chthoniobacterales	-3.077698147	7
-HL2	Genetic 1	o_Clostridiales	-2.703306296	6
-HL2	Genetic 1	p_Synergistetes	-5	11
-HL2	Genetic 1	f_Brevibacteriaceae	-3.407472394	8
-HL2	Genetic 1	f_Chthoniobacteraceae	-3.077698147	3
-HL2	Genetic 1	f_Corynebacteriaceae	-3.235097163	10
-HL2	Genetic 1	f_Aeromonadaceae	-3.342114615	5
-HL2	Genetic 1	c_Oscillatoriophycideae	-1.76204669	16
-HL2	Genetic 1	c_Synergistia	-5	31
-HL2	Genetic 1	g_Arthrospira	-4.133122186	23
-HL2	Genetic 1	g_Desulfovibrio	-5	22
-HL2	Genetic 1	g_Hydrocoleum	-4.133122186	26
-HL2	Genetic 1	g_Lyngbya	-4.133122186	25
-HL2	Genetic 1	g_Phormidium	-4.133122186	27
-HL2	Genetic 1	g_Planktothricoides	-5	19
-HL2	Genetic 1	g_Trichodesmium	-5	20
-HL2	Genetic 1	o_Desulfovibrionales	-5	21
-HL2	Genetic 1	o_Oscillatoriales	-2.832177759	15
-HL2	Genetic 1	o_Synergistales	-5	28
-HL2	Genetic 1	p_Verrucomicrobia	-2.937814282	29
-HL2	Genetic 1	s_Arthrospira platensis	-4.133402031	13
-HL2	Genetic 1	s_Lyngbya hieronymusii	-4.133402031	17
-HL2	Genetic 1	s_Propionibacterium acnes	-3.342114492	18
-HL2	Genetic 1	f_Desulfovibrionaceae	-5	24
-HL2	Genetic 1	f_Thermovirgaceae	-5	30
-HL2	Genetic 1	f_Phormidiaceae	-2.832177759	14
-HL4	Genetic 1	c_Spartobacteria	-3.561006978	12
-HL4	Genetic 1	g_Brevibacterium	-4.320572103	2
-HL4	Genetic 1	g_Candidatus Xiphinematobacter	-3.561006978	1
-HL4	Genetic 1	g_Corynebacterium	-4.175874166	9
-HL4	Genetic 1	o_Aeromonadales	-2.610867774	4
-HL4	Genetic 1	o_Chthoniobacterales	-3.561006978	7
-HL4	Genetic 1	o_Clostridiales	-2.642143447	6
-HL4	Genetic 1	p_Synergistetes	-5	11
-HL4	Genetic 1	f_Brevibacteriaceae	-4.320572103	8
-HL4	Genetic 1	f_Chthoniobacteraceae	-3.561006978	3
-HL4	Genetic 1	f_Corynebacteriaceae	-4.175874166	10
-HL4	Genetic 1	f_Aeromonadaceae	-3.591977236	5
-HL4	Genetic 1	c_Oscillatoriophycideae	-1.894877822	16
-HL4	Genetic 1	c_Synergistia	-5	31
-HL4	Genetic 1	g_Arthrospira	-3.980468315	23
-HL4	Genetic 1	g_Desulfovibrio	-5	22
-HL4	Genetic 1	g_Hydrocoleum	-3.744199424	26
-HL4	Genetic 1	g_Lyngbya	-4.175874166	25
-HL4	Genetic 1	g_Phormidium	-4.320572103	27
-HL4	Genetic 1	g_Planktothricoides	-5	19
-HL4	Genetic 1	g_Trichodesmium	-3.744199424	20
-HL4	Genetic 1	o_Desulfovibrionales	-5	21
-HL4	Genetic 1	o_Oscillatoriales	-2.284646161	15
-HL4	Genetic 1	o_Synergistales	-5	28
-HL4	Genetic 1	p_Verrucomicrobia	-3.532098014	29
-HL4	Genetic 1	s_Arthrospira platensis	-3.980608572	13
-HL4	Genetic 1	s_Lyngbya hieronymusii	-4.175615523	17
-HL4	Genetic 1	s_Propionibacterium acnes	-4.538903165	18
-HL4	Genetic 1	f_Desulfovibrionaceae	-5	24
-HL4	Genetic 1	f_Thermovirgaceae	-5	30
-HL4	Genetic 1	f_Phormidiaceae	-2.284646161	14
-HL5	Genetic 1	c_Spartobacteria	-3.5030095	12
-HL5	Genetic 1	g_Brevibacterium	-3.035207378	2
-HL5	Genetic 1	g_Candidatus Xiphinematobacter	-3.5030095	1
-HL5	Genetic 1	g_Corynebacterium	-2.876957946	9
-HL5	Genetic 1	o_Aeromonadales	-2.255679395	4
-HL5	Genetic 1	o_Chthoniobacterales	-3.5030095	7
-HL5	Genetic 1	o_Clostridiales	-2.948914268	6
-HL5	Genetic 1	p_Synergistetes	-5	11
-HL5	Genetic 1	f_Brevibacteriaceae	-3.035207378	8
-HL5	Genetic 1	f_Chthoniobacteraceae	-3.5030095	3
-HL5	Genetic 1	f_Corynebacteriaceae	-2.876957946	10
-HL5	Genetic 1	f_Aeromonadaceae	-2.572055008	5
-HL5	Genetic 1	c_Oscillatoriophycideae	-2.23251783	16
-HL5	Genetic 1	c_Synergistia	-5	31
-HL5	Genetic 1	g_Arthrospira	-3.953317579	23
-HL5	Genetic 1	g_Desulfovibrio	-5	22
-HL5	Genetic 1	g_Hydrocoleum	-4.358525889	26
-HL5	Genetic 1	g_Lyngbya	-4.110138279	25
-HL5	Genetic 1	g_Phormidium	-4.110138279	27
-HL5	Genetic 1	g_Planktothricoides	-4.358525889	19
-HL5	Genetic 1	g_Trichodesmium	-3.838239812	20
-HL5	Genetic 1	o_Desulfovibrionales	-5	21
-HL5	Genetic 1	o_Oscillatoriales	-2.520474355	15
-HL5	Genetic 1	o_Synergistales	-5	28
-HL5	Genetic 1	p_Verrucomicrobia	-3.085771425	29
-HL5	Genetic 1	s_Arthrospira platensis	-3.953317862	13
-HL5	Genetic 1	s_Lyngbya hieronymusii	-4.110332608	17
-HL5	Genetic 1	s_Propionibacterium acnes	-3.747357586	18
-HL5	Genetic 1	f_Desulfovibrionaceae	-5	24
-HL5	Genetic 1	f_Thermovirgaceae	-5	30
-HL5	Genetic 1	f_Phormidiaceae	-2.520474355	14
-HL7	Genetic 1	c_Spartobacteria	-3.812296012	12
-HL7	Genetic 1	g_Brevibacterium	-3.231911218	2
-HL7	Genetic 1	g_Candidatus Xiphinematobacter	-3.812296012	1
-HL7	Genetic 1	g_Corynebacterium	-2.883863662	9
-HL7	Genetic 1	o_Aeromonadales	-2.344475292	4
-HL7	Genetic 1	o_Chthoniobacterales	-3.812296012	7
-HL7	Genetic 1	o_Clostridiales	-3.08282756	6
-HL7	Genetic 1	p_Synergistetes	-5	11
-HL7	Genetic 1	f_Brevibacteriaceae	-3.231911218	8
-HL7	Genetic 1	f_Chthoniobacteraceae	-3.812296012	3
-HL7	Genetic 1	f_Corynebacteriaceae	-2.883863662	10
-HL7	Genetic 1	f_Aeromonadaceae	-2.682997597	5
-HL7	Genetic 1	c_Oscillatoriophycideae	-1.797153742	16
-HL7	Genetic 1	c_Synergistia	-5	31
-HL7	Genetic 1	g_Arthrospira	-3.460734409	23
-HL7	Genetic 1	g_Desulfovibrio	-5	22
-HL7	Genetic 1	g_Hydrocoleum	-3.309613404	26
-HL7	Genetic 1	g_Lyngbya	-3.974694135	25
-HL7	Genetic 1	g_Phormidium	-2.952921876	27
-HL7	Genetic 1	g_Planktothricoides	-5	19
-HL7	Genetic 1	g_Trichodesmium	-3.136485022	20
-HL7	Genetic 1	o_Desulfovibrionales	-5	21
-HL7	Genetic 1	o_Oscillatoriales	-2.178030211	15
-HL7	Genetic 1	o_Synergistales	-5	28
-HL7	Genetic 1	p_Verrucomicrobia	-2.91702163	29
-HL7	Genetic 1	s_Arthrospira platensis	-3.460734917	13
-HL7	Genetic 1	s_Lyngbya hieronymusii	-3.974517883	17
-HL7	Genetic 1	s_Propionibacterium acnes	-2.130456575	18
-HL7	Genetic 1	f_Desulfovibrionaceae	-5	24
-HL7	Genetic 1	f_Thermovirgaceae	-5	30
-HL7	Genetic 1	f_Phormidiaceae	-2.178030211	14
+HA1	Gen 2	c_Spartobacteria	-5	12
+HA1	Gen 2	g_Brevibacterium	-5	2
+HA1	Gen 2	g_Candidatus Xiphinematobacter	-5	1
+HA1	Gen 2	g_Corynebacterium	-5	9
+HA1	Gen 2	o_Aeromonadales	-3.212271097	4
+HA1	Gen 2	o_Chthoniobacterales	-5	7
+HA1	Gen 2	o_Clostridiales	-5	6
+HA1	Gen 2	p_Synergistetes	-2.5190027	11
+HA1	Gen 2	f_Brevibacteriaceae	-5	8
+HA1	Gen 2	f_Chthoniobacteraceae	-5	3
+HA1	Gen 2	f_Corynebacteriaceae	-5	10
+HA1	Gen 2	f_Aeromonadaceae	-5	5
+HA1	Gen 2	c_Oscillatoriophycideae	-1.194036101	16
+HA1	Gen 2	c_Synergistia	-2.519002644	31
+HA1	Gen 2	g_Arthrospira	-2.615554109	23
+HA1	Gen 2	g_Desulfovibrio	-2.042839016	22
+HA1	Gen 2	g_Hydrocoleum	-2.91479579	26
+HA1	Gen 2	g_Lyngbya	-3.384836175	25
+HA1	Gen 2	g_Phormidium	-2.993263624	27
+HA1	Gen 2	g_Planktothricoides	-5	19
+HA1	Gen 2	g_Trichodesmium	-3.089106245	20
+HA1	Gen 2	o_Desulfovibrionales	-2.042839016	21
+HA1	Gen 2	o_Oscillatoriales	-1.261882833	15
+HA1	Gen 2	o_Synergistales	-2.519002644	28
+HA1	Gen 2	p_Verrucomicrobia	-5	29
+HA1	Gen 2	s_Arthrospira platensis	-2.615554165	13
+HA1	Gen 2	s_Lyngbya hieronymusii	-3.384836581	17
+HA1	Gen 2	s_Propionibacterium acnes	-3.212271152	18
+HA1	Gen 2	f_Desulfovibrionaceae	-2.042839016	24
+HA1	Gen 2	f_Thermovirgaceae	-2.519002644	30
+HA1	Gen 2	f_Phormidiaceae	-1.261882833	14
+HA2	Gen 2	c_Spartobacteria	-5	12
+HA2	Gen 2	g_Brevibacterium	-3.658106691	2
+HA2	Gen 2	g_Candidatus Xiphinematobacter	-5	1
+HA2	Gen 2	g_Corynebacterium	-5	9
+HA2	Gen 2	o_Aeromonadales	-3.488655498	4
+HA2	Gen 2	o_Chthoniobacterales	-5	7
+HA2	Gen 2	o_Clostridiales	-2.862248811	6
+HA2	Gen 2	p_Synergistetes	-3.272191369	11
+HA2	Gen 2	f_Brevibacteriaceae	-3.658106691	8
+HA2	Gen 2	f_Chthoniobacteraceae	-5	3
+HA2	Gen 2	f_Corynebacteriaceae	-5	10
+HA2	Gen 2	f_Aeromonadaceae	-3.658106691	5
+HA2	Gen 2	c_Oscillatoriophycideae	-1.397194477	16
+HA2	Gen 2	c_Synergistia	-3.272191254	31
+HA2	Gen 2	g_Arthrospira	-2.862248811	23
+HA2	Gen 2	g_Desulfovibrio	-2.698438319	22
+HA2	Gen 2	g_Hydrocoleum	-3.367074246	26
+HA2	Gen 2	g_Lyngbya	-3.488655498	25
+HA2	Gen 2	g_Phormidium	-3.367074246	27
+HA2	Gen 2	g_Planktothricoides	-3.488655498	19
+HA2	Gen 2	g_Trichodesmium	-3.272191254	20
+HA2	Gen 2	o_Desulfovibrionales	-2.698438319	21
+HA2	Gen 2	o_Oscillatoriales	-1.416959926	15
+HA2	Gen 2	o_Synergistales	-3.272191254	28
+HA2	Gen 2	p_Verrucomicrobia	-3.939809365	29
+HA2	Gen 2	s_Arthrospira platensis	-2.8622488	13
+HA2	Gen 2	s_Lyngbya hieronymusii	-3.488655076	17
+HA2	Gen 2	s_Propionibacterium acnes	-3.128391807	18
+HA2	Gen 2	f_Desulfovibrionaceae	-2.698438319	24
+HA2	Gen 2	f_Thermovirgaceae	-3.272191254	30
+HA2	Gen 2	f_Phormidiaceae	-1.416959926	14
+HA5	Gen 2	c_Spartobacteria	-5	12
+HA5	Gen 2	g_Brevibacterium	-5	2
+HA5	Gen 2	g_Candidatus Xiphinematobacter	-5	1
+HA5	Gen 2	g_Corynebacterium	-5	9
+HA5	Gen 2	o_Aeromonadales	-2.861259438	4
+HA5	Gen 2	o_Chthoniobacterales	-5	7
+HA5	Gen 2	o_Clostridiales	-3.225049686	6
+HA5	Gen 2	p_Synergistetes	-5	11
+HA5	Gen 2	f_Brevibacteriaceae	-5	8
+HA5	Gen 2	f_Chthoniobacteraceae	-5	3
+HA5	Gen 2	f_Corynebacteriaceae	-5	10
+HA5	Gen 2	f_Aeromonadaceae	-5	5
+HA5	Gen 2	c_Oscillatoriophycideae	-0.908772074	16
+HA5	Gen 2	c_Synergistia	-5	31
+HA5	Gen 2	g_Arthrospira	-2.593872851	23
+HA5	Gen 2	g_Desulfovibrio	-3.101937184	22
+HA5	Gen 2	g_Hydrocoleum	-2.041593189	26
+HA5	Gen 2	g_Lyngbya	-2.965135012	25
+HA5	Gen 2	g_Phormidium	-2.707305203	27
+HA5	Gen 2	g_Planktothricoides	-3.518848432	19
+HA5	Gen 2	g_Trichodesmium	-1.767262105	20
+HA5	Gen 2	o_Desulfovibrionales	-3.101937184	21
+HA5	Gen 2	o_Oscillatoriales	-0.922027589	15
+HA5	Gen 2	o_Synergistales	-5	28
+HA5	Gen 2	p_Verrucomicrobia	-3.22504941	29
+HA5	Gen 2	s_Arthrospira platensis	-2.593872913	13
+HA5	Gen 2	s_Lyngbya hieronymusii	-2.965135134	17
+HA5	Gen 2	s_Propionibacterium acnes	-3.68782661	18
+HA5	Gen 2	f_Desulfovibrionaceae	-3.101937184	24
+HA5	Gen 2	f_Thermovirgaceae	-5	30
+HA5	Gen 2	f_Phormidiaceae	-0.922027589	14
+HA7	Gen 2	c_Spartobacteria	-5	12
+HA7	Gen 2	g_Brevibacterium	-5	2
+HA7	Gen 2	g_Candidatus Xiphinematobacter	-5	1
+HA7	Gen 2	g_Corynebacterium	-5	9
+HA7	Gen 2	o_Aeromonadales	-3.303118756	4
+HA7	Gen 2	o_Chthoniobacterales	-5	7
+HA7	Gen 2	o_Clostridiales	-2.976805587	6
+HA7	Gen 2	p_Synergistetes	-4.098774494	11
+HA7	Gen 2	f_Brevibacteriaceae	-5	8
+HA7	Gen 2	f_Chthoniobacteraceae	-5	3
+HA7	Gen 2	f_Corynebacteriaceae	-5	10
+HA7	Gen 2	f_Aeromonadaceae	-3.303118756	5
+HA7	Gen 2	c_Oscillatoriophycideae	-1.379502558	16
+HA7	Gen 2	c_Synergistia	-4.098541679	31
+HA7	Gen 2	g_Arthrospira	-3.150842962	23
+HA7	Gen 2	g_Desulfovibrio	-2.922932389	22
+HA7	Gen 2	g_Hydrocoleum	-3.110009577	26
+HA7	Gen 2	g_Lyngbya	-3.303118756	25
+HA7	Gen 2	g_Phormidium	-2.502437628	27
+HA7	Gen 2	g_Planktothricoides	-4.098541679	19
+HA7	Gen 2	g_Trichodesmium	-3.110009577	20
+HA7	Gen 2	o_Desulfovibrionales	-2.922932389	21
+HA7	Gen 2	o_Oscillatoriales	-1.38681231	15
+HA7	Gen 2	o_Synergistales	-4.098541679	28
+HA7	Gen 2	p_Verrucomicrobia	-5	29
+HA7	Gen 2	s_Arthrospira platensis	-3.150843047	13
+HA7	Gen 2	s_Lyngbya hieronymusii	-3.303118753	17
+HA7	Gen 2	s_Propionibacterium acnes	-3.445769639	18
+HA7	Gen 2	f_Desulfovibrionaceae	-2.922932389	24
+HA7	Gen 2	f_Thermovirgaceae	-4.098541679	30
+HA7	Gen 2	f_Phormidiaceae	-1.38681231	14
+HA8	Gen 2	c_Spartobacteria	-5	12
+HA8	Gen 2	g_Brevibacterium	-5	2
+HA8	Gen 2	g_Candidatus Xiphinematobacter	-5	1
+HA8	Gen 2	g_Corynebacterium	-5	9
+HA8	Gen 2	o_Aeromonadales	-3.468973496	4
+HA8	Gen 2	o_Chthoniobacterales	-5	7
+HA8	Gen 2	o_Clostridiales	-3.129276052	6
+HA8	Gen 2	p_Synergistetes	-3.57447968	11
+HA8	Gen 2	f_Brevibacteriaceae	-5	8
+HA8	Gen 2	f_Chthoniobacteraceae	-5	3
+HA8	Gen 2	f_Corynebacteriaceae	-5	10
+HA8	Gen 2	f_Aeromonadaceae	-3.714134519	5
+HA8	Gen 2	c_Oscillatoriophycideae	-2.109299658	16
+HA8	Gen 2	c_Synergistia	-3.574480452	31
+HA8	Gen 2	g_Arthrospira	-4.079354999	23
+HA8	Gen 2	g_Desulfovibrio	-3.108365548	22
+HA8	Gen 2	g_Hydrocoleum	-3.518530139	26
+HA8	Gen 2	g_Lyngbya	-3.805460683	25
+HA8	Gen 2	g_Phormidium	-3.638718017	27
+HA8	Gen 2	g_Planktothricoides	-4.079354999	19
+HA8	Gen 2	g_Trichodesmium	-3.468973496	20
+HA8	Gen 2	o_Desulfovibrionales	-3.108365548	21
+HA8	Gen 2	o_Oscillatoriales	-2.113410921	15
+HA8	Gen 2	o_Synergistales	-3.574480452	28
+HA8	Gen 2	p_Verrucomicrobia	-3.57447968	29
+HA8	Gen 2	s_Arthrospira platensis	-4.079591205	13
+HA8	Gen 2	s_Lyngbya hieronymusii	-3.805459537	17
+HA8	Gen 2	s_Propionibacterium acnes	-4.079591205	18
+HA8	Gen 2	f_Desulfovibrionaceae	-3.108365548	24
+HA8	Gen 2	f_Thermovirgaceae	-3.574480452	30
+HA8	Gen 2	f_Phormidiaceae	-2.113410921	14
+HL1	Gen 1	c_Spartobacteria	-3.464892046	12
+HL1	Gen 1	g_Brevibacterium	-4.1837587	2
+HL1	Gen 1	g_Candidatus Xiphinematobacter	-3.464892046	1
+HL1	Gen 1	g_Corynebacterium	-5	9
+HL1	Gen 1	o_Aeromonadales	-3.343132637	4
+HL1	Gen 1	o_Chthoniobacterales	-3.464892046	7
+HL1	Gen 1	o_Clostridiales	-2.790810292	6
+HL1	Gen 1	p_Synergistetes	-5	11
+HL1	Gen 1	f_Brevibacteriaceae	-4.1837587	8
+HL1	Gen 1	f_Chthoniobacteraceae	-3.464892046	3
+HL1	Gen 1	f_Corynebacteriaceae	-5	10
+HL1	Gen 1	f_Aeromonadaceae	-3.541547993	5
+HL1	Gen 1	c_Oscillatoriophycideae	-3.248140684	16
+HL1	Gen 1	c_Synergistia	-5	31
+HL1	Gen 1	g_Arthrospira	-5	23
+HL1	Gen 1	g_Desulfovibrio	-5	22
+HL1	Gen 1	g_Hydrocoleum	-5	26
+HL1	Gen 1	g_Lyngbya	-5	25
+HL1	Gen 1	g_Phormidium	-5	27
+HL1	Gen 1	g_Planktothricoides	-5	19
+HL1	Gen 1	g_Trichodesmium	-5	20
+HL1	Gen 1	o_Desulfovibrionales	-5	21
+HL1	Gen 1	o_Oscillatoriales	-3.399759164	15
+HL1	Gen 1	o_Synergistales	-5	28
+HL1	Gen 1	p_Verrucomicrobia	-3.464892621	29
+HL1	Gen 1	s_Arthrospira platensis	-5	13
+HL1	Gen 1	s_Lyngbya hieronymusii	-5	17
+HL1	Gen 1	s_Propionibacterium acnes	-3.046913871	18
+HL1	Gen 1	f_Desulfovibrionaceae	-5	24
+HL1	Gen 1	f_Thermovirgaceae	-5	30
+HL1	Gen 1	f_Phormidiaceae	-3.399759164	14
+HL2	Gen 1	c_Spartobacteria	-3.077698147	12
+HL2	Gen 1	g_Brevibacterium	-3.407472394	2
+HL2	Gen 1	g_Candidatus Xiphinematobacter	-3.077698147	1
+HL2	Gen 1	g_Corynebacterium	-3.235097163	9
+HL2	Gen 1	o_Aeromonadales	-2.439794616	4
+HL2	Gen 1	o_Chthoniobacterales	-3.077698147	7
+HL2	Gen 1	o_Clostridiales	-2.703306296	6
+HL2	Gen 1	p_Synergistetes	-5	11
+HL2	Gen 1	f_Brevibacteriaceae	-3.407472394	8
+HL2	Gen 1	f_Chthoniobacteraceae	-3.077698147	3
+HL2	Gen 1	f_Corynebacteriaceae	-3.235097163	10
+HL2	Gen 1	f_Aeromonadaceae	-3.342114615	5
+HL2	Gen 1	c_Oscillatoriophycideae	-1.76204669	16
+HL2	Gen 1	c_Synergistia	-5	31
+HL2	Gen 1	g_Arthrospira	-4.133122186	23
+HL2	Gen 1	g_Desulfovibrio	-5	22
+HL2	Gen 1	g_Hydrocoleum	-4.133122186	26
+HL2	Gen 1	g_Lyngbya	-4.133122186	25
+HL2	Gen 1	g_Phormidium	-4.133122186	27
+HL2	Gen 1	g_Planktothricoides	-5	19
+HL2	Gen 1	g_Trichodesmium	-5	20
+HL2	Gen 1	o_Desulfovibrionales	-5	21
+HL2	Gen 1	o_Oscillatoriales	-2.832177759	15
+HL2	Gen 1	o_Synergistales	-5	28
+HL2	Gen 1	p_Verrucomicrobia	-2.937814282	29
+HL2	Gen 1	s_Arthrospira platensis	-4.133402031	13
+HL2	Gen 1	s_Lyngbya hieronymusii	-4.133402031	17
+HL2	Gen 1	s_Propionibacterium acnes	-3.342114492	18
+HL2	Gen 1	f_Desulfovibrionaceae	-5	24
+HL2	Gen 1	f_Thermovirgaceae	-5	30
+HL2	Gen 1	f_Phormidiaceae	-2.832177759	14
+HL4	Gen 1	c_Spartobacteria	-3.561006978	12
+HL4	Gen 1	g_Brevibacterium	-4.320572103	2
+HL4	Gen 1	g_Candidatus Xiphinematobacter	-3.561006978	1
+HL4	Gen 1	g_Corynebacterium	-4.175874166	9
+HL4	Gen 1	o_Aeromonadales	-2.610867774	4
+HL4	Gen 1	o_Chthoniobacterales	-3.561006978	7
+HL4	Gen 1	o_Clostridiales	-2.642143447	6
+HL4	Gen 1	p_Synergistetes	-5	11
+HL4	Gen 1	f_Brevibacteriaceae	-4.320572103	8
+HL4	Gen 1	f_Chthoniobacteraceae	-3.561006978	3
+HL4	Gen 1	f_Corynebacteriaceae	-4.175874166	10
+HL4	Gen 1	f_Aeromonadaceae	-3.591977236	5
+HL4	Gen 1	c_Oscillatoriophycideae	-1.894877822	16
+HL4	Gen 1	c_Synergistia	-5	31
+HL4	Gen 1	g_Arthrospira	-3.980468315	23
+HL4	Gen 1	g_Desulfovibrio	-5	22
+HL4	Gen 1	g_Hydrocoleum	-3.744199424	26
+HL4	Gen 1	g_Lyngbya	-4.175874166	25
+HL4	Gen 1	g_Phormidium	-4.320572103	27
+HL4	Gen 1	g_Planktothricoides	-5	19
+HL4	Gen 1	g_Trichodesmium	-3.744199424	20
+HL4	Gen 1	o_Desulfovibrionales	-5	21
+HL4	Gen 1	o_Oscillatoriales	-2.284646161	15
+HL4	Gen 1	o_Synergistales	-5	28
+HL4	Gen 1	p_Verrucomicrobia	-3.532098014	29
+HL4	Gen 1	s_Arthrospira platensis	-3.980608572	13
+HL4	Gen 1	s_Lyngbya hieronymusii	-4.175615523	17
+HL4	Gen 1	s_Propionibacterium acnes	-4.538903165	18
+HL4	Gen 1	f_Desulfovibrionaceae	-5	24
+HL4	Gen 1	f_Thermovirgaceae	-5	30
+HL4	Gen 1	f_Phormidiaceae	-2.284646161	14
+HL5	Gen 1	c_Spartobacteria	-3.5030095	12
+HL5	Gen 1	g_Brevibacterium	-3.035207378	2
+HL5	Gen 1	g_Candidatus Xiphinematobacter	-3.5030095	1
+HL5	Gen 1	g_Corynebacterium	-2.876957946	9
+HL5	Gen 1	o_Aeromonadales	-2.255679395	4
+HL5	Gen 1	o_Chthoniobacterales	-3.5030095	7
+HL5	Gen 1	o_Clostridiales	-2.948914268	6
+HL5	Gen 1	p_Synergistetes	-5	11
+HL5	Gen 1	f_Brevibacteriaceae	-3.035207378	8
+HL5	Gen 1	f_Chthoniobacteraceae	-3.5030095	3
+HL5	Gen 1	f_Corynebacteriaceae	-2.876957946	10
+HL5	Gen 1	f_Aeromonadaceae	-2.572055008	5
+HL5	Gen 1	c_Oscillatoriophycideae	-2.23251783	16
+HL5	Gen 1	c_Synergistia	-5	31
+HL5	Gen 1	g_Arthrospira	-3.953317579	23
+HL5	Gen 1	g_Desulfovibrio	-5	22
+HL5	Gen 1	g_Hydrocoleum	-4.358525889	26
+HL5	Gen 1	g_Lyngbya	-4.110138279	25
+HL5	Gen 1	g_Phormidium	-4.110138279	27
+HL5	Gen 1	g_Planktothricoides	-4.358525889	19
+HL5	Gen 1	g_Trichodesmium	-3.838239812	20
+HL5	Gen 1	o_Desulfovibrionales	-5	21
+HL5	Gen 1	o_Oscillatoriales	-2.520474355	15
+HL5	Gen 1	o_Synergistales	-5	28
+HL5	Gen 1	p_Verrucomicrobia	-3.085771425	29
+HL5	Gen 1	s_Arthrospira platensis	-3.953317862	13
+HL5	Gen 1	s_Lyngbya hieronymusii	-4.110332608	17
+HL5	Gen 1	s_Propionibacterium acnes	-3.747357586	18
+HL5	Gen 1	f_Desulfovibrionaceae	-5	24
+HL5	Gen 1	f_Thermovirgaceae	-5	30
+HL5	Gen 1	f_Phormidiaceae	-2.520474355	14
+HL7	Gen 1	c_Spartobacteria	-3.812296012	12
+HL7	Gen 1	g_Brevibacterium	-3.231911218	2
+HL7	Gen 1	g_Candidatus Xiphinematobacter	-3.812296012	1
+HL7	Gen 1	g_Corynebacterium	-2.883863662	9
+HL7	Gen 1	o_Aeromonadales	-2.344475292	4
+HL7	Gen 1	o_Chthoniobacterales	-3.812296012	7
+HL7	Gen 1	o_Clostridiales	-3.08282756	6
+HL7	Gen 1	p_Synergistetes	-5	11
+HL7	Gen 1	f_Brevibacteriaceae	-3.231911218	8
+HL7	Gen 1	f_Chthoniobacteraceae	-3.812296012	3
+HL7	Gen 1	f_Corynebacteriaceae	-2.883863662	10
+HL7	Gen 1	f_Aeromonadaceae	-2.682997597	5
+HL7	Gen 1	c_Oscillatoriophycideae	-1.797153742	16
+HL7	Gen 1	c_Synergistia	-5	31
+HL7	Gen 1	g_Arthrospira	-3.460734409	23
+HL7	Gen 1	g_Desulfovibrio	-5	22
+HL7	Gen 1	g_Hydrocoleum	-3.309613404	26
+HL7	Gen 1	g_Lyngbya	-3.974694135	25
+HL7	Gen 1	g_Phormidium	-2.952921876	27
+HL7	Gen 1	g_Planktothricoides	-5	19
+HL7	Gen 1	g_Trichodesmium	-3.136485022	20
+HL7	Gen 1	o_Desulfovibrionales	-5	21
+HL7	Gen 1	o_Oscillatoriales	-2.178030211	15
+HL7	Gen 1	o_Synergistales	-5	28
+HL7	Gen 1	p_Verrucomicrobia	-2.91702163	29
+HL7	Gen 1	s_Arthrospira platensis	-3.460734917	13
+HL7	Gen 1	s_Lyngbya hieronymusii	-3.974517883	17
+HL7	Gen 1	s_Propionibacterium acnes	-2.130456575	18
+HL7	Gen 1	f_Desulfovibrionaceae	-5	24
+HL7	Gen 1	f_Thermovirgaceae	-5	30
+HL7	Gen 1	f_Phormidiaceae	-2.178030211	14
