@@ -1,0 +1,493 @@
+---
+title: "Bdiv Est vs Laj"
+#author: "Luigui Gallardo Becerra"
+date: "03/19/2025"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library("optparse")
+library("ggplot2")
+library("reshape")
+require("gridExtra")
+library("ggpubr")
+library("ggh4x")
+library("dplyr")
+library("rstatix")
+library("vegan")
+library("ggordiplots")
+```
+
+# Spider PCoA 
+## Beta diversity contrasting Organs
+### pc1 vs pc2
+
+```{r, echo=FALSE, warning=FALSE}
+# Input table and metadata
+beta_data <- read.table(file = "./unweighted_unifrac_dm_est-laj.tsv",
+                        sep="\t",
+                        header=T,
+                        row.names=1)
+
+metadata <- read.table(file = "./metadata_est_laj.tsv",
+                       sep="\t",
+                       header=T,
+                       row.names=1)
+
+# metadata <- metadata %>% filter(!grepl("Pond A", Pond))
+
+metadata <- metadata %>% mutate(Organ = factor(Organ,
+                                                            levels=c(
+                                                              "Gut",
+                                                              "Hepatopancreas")))
+
+# Define colors
+colors <- c("mediumseagreen",
+            "darkviolet")
+
+# Define shapes
+shapes <- c(15,
+            16)
+
+# PCoA plot
+theme_set(theme_bw())
+
+ord <- cmdscale(beta_data,
+                eig = T,
+                x.ret = TRUE,
+                k=ncol(beta_data)-1)
+
+ord$points[,1] <- -ord$points[,1]
+ord$points[,2] <- -ord$points[,2]
+plt <- gg_ordiplot(ord,
+                   choices = c(1, 2),
+                   groups = metadata$Organ,
+                   conf = 0.95,
+                   spiders = TRUE,
+                   plot = FALSE,
+                   ellipse = FALSE,
+                   pt.size = 1,
+                   scaling = 1)
+
+plt <- plt$plot +
+  geom_point(data = plt$df_ord,
+             aes(x = x, y = y, color = Group, shape = Group),
+             size = 2) +
+scale_color_manual(values = colors) +
+scale_shape_manual(values = shapes) +
+  scale_fill_manual(values = colors) +
+labs(
+  x="PC1 (24.67%)",
+  y="PC2 (15.29%)",
+    subtitle = "ANOSIM=0.4596; p-value=0.001",
+    title = "") +
+geom_hline(yintercept=0,
+    color = "gray") +
+geom_vline(xintercept=0,
+    color = "gray") +
+  theme(aspect.ratio = 1, legend.title = element_blank(),
+        legend.position = c(0.5, 1.1),
+        legend.direction = "horizontal",
+        legend.background = element_blank(),
+        legend.text = element_text(size=12),
+        axis.text.x = element_text(size=12),
+        axis.text.y = element_text(size=12),
+        axis.title.x = element_text(size=12),
+        axis.title.y = element_text(size=12),
+        plot.subtitle = element_text(hjust = 0.5,
+                                     vjust = -1))
+
+plt
+```
+
+```{r, echo=FALSE, warning=FALSE, include=FALSE}
+# Creation of .tiff
+ggsave("./organ_est-laj_pc1-pc2_spider.tiff",
+       width=5,
+       height=5,
+       dpi=300,
+       device="tiff")
+
+dev.off()
+```
+
+\newpage
+
+### pc1 vs pc3
+```{r, echo=FALSE, warning=FALSE}
+# Define colors
+colors <- c("mediumseagreen",
+            "darkviolet")
+
+# Define shapes
+shapes <- c(15,
+            16)
+
+# Define shapes
+shapes <- c(15, 16)
+
+# PCoA plot
+theme_set(theme_bw())
+ord <- cmdscale(beta_data,
+                eig = T,
+                x.ret = TRUE,
+                k=ncol(beta_data)-1)
+
+ord$points[,1] <- -ord$points[,1]
+ord$points[,2] <- -ord$points[,2]
+
+plt <- gg_ordiplot(ord,
+                   choices = c(1, 3),
+                   groups = metadata$Organ,
+                   conf = 0.95,
+                   spiders = TRUE,
+                   plot = FALSE,
+                   ellipse = FALSE,
+                   pt.size = 1,
+                   scaling = 1)
+
+plt <- plt$plot +
+  geom_point(data = plt$df_ord,
+             aes(x = x, y = y, color = Group, shape = Group),
+             size = 2) +
+scale_color_manual(values = colors) +
+scale_shape_manual(values = shapes) +
+  scale_fill_manual(values = colors) +
+labs(
+  x="PC1 (24.67%)",
+  y="PC3 (8.49%)",
+    subtitle = "ANOSIM=0.4596; p-value=0.001",
+    title = "") +
+geom_hline(yintercept=0,
+    color = "gray") +
+geom_vline(xintercept=0,
+    color = "gray") +
+  theme(aspect.ratio = 1, legend.title = element_blank(),
+        legend.position = c(0.5, 1.1),
+        legend.direction = "horizontal",
+        legend.background = element_blank(),
+        legend.text = element_text(size=12),
+        axis.text.x = element_text(size=12),
+        axis.text.y = element_text(size=12),
+        axis.title.x = element_text(size=12),
+        axis.title.y = element_text(size=12),
+        plot.subtitle = element_text(hjust = 0.5,
+                                     vjust = -1))
+
+plt
+```
+
+```{r, echo=FALSE, warning=FALSE, include=FALSE}
+
+# Creation of .tiff
+ggsave("./organ_est-laj_pc1-pc3_spider.tiff",
+       width=5,
+       height=5,
+       dpi=300,
+       device="tiff")
+
+dev.off()
+```
+
+\newpage
+### pc2 vs pc3
+```{r, echo=FALSE, warning=FALSE}
+# Define colors
+colors <- c("mediumseagreen",
+            "darkviolet")
+
+# Define shapes
+shapes <- c(15,
+            16)
+
+# PCoA plot
+theme_set(theme_bw())
+ord <- cmdscale(beta_data,
+                eig = T,
+                x.ret = TRUE,
+                k=ncol(beta_data)-1)
+
+ord$points[,1] <- -ord$points[,1]
+ord$points[,2] <- -ord$points[,2]
+
+plt <- gg_ordiplot(ord,
+                   choices = c(3, 2),
+                   groups = metadata$Organ,
+                   conf = 0.95,
+                   spiders = TRUE,
+                   plot = FALSE,
+                   ellipse = FALSE,
+                   pt.size = 1,
+                   scaling = 1)
+
+plt <- plt$plot +
+  geom_point(data = plt$df_ord,
+             aes(x = x, y = y, color = Group, shape = Group),
+             size = 2) +
+scale_color_manual(values = colors) +
+scale_shape_manual(values = shapes) +
+  scale_fill_manual(values = colors) +
+labs(
+  y="PC2 (15.29%)",
+  x="PC3 (8.49%)",
+    subtitle = "ANOSIM=0.4596; p-value=0.001",
+    title = "") +
+geom_hline(yintercept=0,
+    color = "gray") +
+geom_vline(xintercept=0,
+    color = "gray") +
+  theme(aspect.ratio = 1, legend.title = element_blank(),
+        legend.position = c(0.5, 1.1),
+        legend.direction = "horizontal",
+        legend.background = element_blank(),
+        legend.text = element_text(size=12),
+        axis.text.x = element_text(size=12),
+        axis.text.y = element_text(size=12),
+        axis.title.x = element_text(size=12),
+        axis.title.y = element_text(size=12),
+        plot.subtitle = element_text(hjust = 0.5,
+                                     vjust = -1))
+
+plt
+```
+
+```{r, echo=FALSE, warning=FALSE, include=FALSE}
+
+# Creation of .tiff
+ggsave("./organ_est-laj_pc2-pc3_spider.tiff",
+       width=5,
+       height=5,
+       dpi=300,
+       device="tiff")
+
+dev.off()
+```
+\newpage
+
+## Beta diversity contrasting Genetics
+### pc1 vs pc2
+```{r, echo=FALSE, warning=FALSE}
+# Input table and metadata
+beta_data <- read.table(file = "./unweighted_unifrac_dm_est-laj.tsv",
+                        sep="\t",
+                        header=T,
+                        row.names=1,
+                        check.names=F)
+
+metadata <- read.table(file = "../../metadata.tsv",
+                       sep="\t",
+                       header=T,
+                       row.names=1,
+                       check.names=F)
+
+metadata <- metadata %>% filter(!grepl("Pond A", Pond))
+
+
+metadata <- metadata %>% mutate(Genetic = factor(Genetic,
+                                                            levels=c(
+                                                              "Genetic 1",
+                                                              "Genetic 2")))
+
+# Define colors
+colors <- c("royalblue",
+            "orangered")
+
+# Define shapes
+shapes <- c(15, 16)
+
+# PCoA plot
+theme_set(theme_bw())
+ord <- cmdscale(beta_data,
+                eig = T,
+                x.ret = TRUE,
+                k=ncol(beta_data)-1)
+
+ord$points[,1] <- -ord$points[,1]
+ord$points[,2] <- -ord$points[,2]
+
+plt <- gg_ordiplot(ord,
+                   choices = c(1, 2),
+                   groups = metadata$Genetic,
+                   conf = 0.95,
+                   spiders = TRUE,
+                   plot = FALSE,
+                   ellipse = FALSE,
+                   pt.size = 1,
+                   scaling = 1)
+
+plt <- plt$plot +
+  geom_point(data = plt$df_ord,
+             aes(x = x, y = y, color = Group, shape = Group),
+             size = 2) +
+
+scale_color_manual(values = colors) +
+scale_shape_manual(values = shapes) +
+  scale_fill_manual(values = colors) +
+labs(
+  x="PC1 (24.67%)",
+  y="PC2 (15.29%)",
+    subtitle = "ANOSIM=0.1572; p-value=0.016",
+    title = "") +
+geom_hline(yintercept=0,
+    color = "gray") +
+geom_vline(xintercept=0,
+    color = "gray") +
+  theme(aspect.ratio = 1, legend.title = element_blank(),
+        legend.position = c(0.5, 1.1),
+        legend.direction = "horizontal",
+        legend.background = element_blank(),
+        legend.text = element_text(size=12),
+        axis.text.x = element_text(size=12),
+        axis.text.y = element_text(size=12),
+        axis.title.x = element_text(size=12),
+        axis.title.y = element_text(size=12),
+        plot.subtitle = element_text(hjust = 0.5,
+                                     vjust = -1))
+
+plt
+```
+
+```{r, echo=FALSE, warning=FALSE, include=FALSE}
+# Creation of .tiff
+ggsave("./genetics_est-laj_pc1-pc2_spider.tiff",
+       width=5,
+       height=5,
+       dpi=300,
+       device="tiff")
+
+dev.off()
+```
+\newpage
+
+### pc1 vs pc3
+```{r, echo=FALSE, warning=FALSE}
+# PCoA plot
+theme_set(theme_bw())
+ord <- cmdscale(beta_data,
+                eig = T,
+                x.ret = TRUE,
+                k=ncol(beta_data)-1)
+
+ord$points[,1] <- -ord$points[,1]
+ord$points[,2] <- -ord$points[,2]
+
+plt <- gg_ordiplot(ord,
+                   choices = c(1, 3),
+                   groups = metadata$Genetic,
+                   conf = 0.95,
+                   spiders = TRUE,
+                   plot = FALSE,
+                   ellipse = FALSE,
+                   pt.size = 1,
+                   scaling = 1)
+
+plt <- plt$plot +
+  geom_point(data = plt$df_ord,
+             aes(x = x, y = y, color = Group, shape = Group),
+             size = 2) +
+
+scale_color_manual(values = colors) +
+scale_shape_manual(values = shapes) +
+  scale_fill_manual(values = colors) +
+labs(
+  x="PC1 (24.67%)",
+  y="PC3 (8.49%)",
+    subtitle = "ANOSIM=0.1572; p-value=0.016",
+    title = "") +
+geom_hline(yintercept=0,
+    color = "gray") +
+geom_vline(xintercept=0,
+    color = "gray") +
+  theme(aspect.ratio = 1, legend.title = element_blank(),
+        legend.position = c(0.5, 1.1),
+        legend.direction = "horizontal",
+        legend.background = element_blank(),
+        legend.text = element_text(size=12),
+        axis.text.x = element_text(size=12),
+        axis.text.y = element_text(size=12),
+        axis.title.x = element_text(size=12),
+        axis.title.y = element_text(size=12),
+        plot.subtitle = element_text(hjust = 0.5,
+                                     vjust = -1))
+plt
+```
+
+```{r, echo=FALSE, warning=FALSE, include=FALSE}
+
+# Creation of .tiff
+ggsave("./genetics_est-laj_pc1-pc3_spider.tiff",
+       width=5,
+       height=5,
+       dpi=300,
+       device="tiff")
+
+dev.off()
+```
+\newpage
+
+### pc2 vs pc3
+```{r, echo=FALSE, warning=FALSE}
+# PCoA plot
+theme_set(theme_bw())
+ord <- cmdscale(beta_data,
+                eig = T,
+                x.ret = TRUE,
+                k=ncol(beta_data)-1)
+
+ord$points[,1] <- -ord$points[,1]
+ord$points[,2] <- -ord$points[,2]
+
+plt <- gg_ordiplot(ord,
+                   choices = c(3, 2),
+                   groups = metadata$Genetic,
+                   conf = 0.95,
+                   spiders = TRUE,
+                   plot = FALSE,
+                   ellipse = FALSE,
+                   pt.size = 1,
+                   scaling = 1)
+
+plt <- plt$plot +
+  geom_point(data = plt$df_ord,
+             aes(x = x, y = y, color = Group, shape = Group),
+             size = 2) +
+
+scale_color_manual(values = colors) +
+scale_shape_manual(values = shapes) +
+  scale_fill_manual(values = colors) +
+labs(
+  x="PC3 (8.49%)",
+  y="PC2 (15.29%)",
+    subtitle = "ANOSIM=0.1572; p-value=0.016",
+    title = "") +
+geom_hline(yintercept=0,
+    color = "gray") +
+geom_vline(xintercept=0,
+    color = "gray") +
+  theme(aspect.ratio = 1, legend.title = element_blank(),
+        legend.position = c(0.5, 1.1),
+        legend.direction = "horizontal",
+        legend.background = element_blank(),
+        legend.text = element_text(size=12),
+        axis.text.x = element_text(size=12),
+        axis.text.y = element_text(size=12),
+        axis.title.x = element_text(size=12),
+        axis.title.y = element_text(size=12),
+        plot.subtitle = element_text(hjust = 0.5,
+                                     vjust = -1))
+
+plt
+```
+
+```{r, echo=FALSE, warning=FALSE, include=FALSE}
+
+# Creation of .tiff
+ggsave("./genetics_est-laj_pc2-pc3_spider.tiff",
+       width=5,
+       height=5,
+       dpi=300,
+       device="tiff")
+
+dev.off()
+```

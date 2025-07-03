@@ -1,0 +1,331 @@
+---
+title: "Bdiv Maz vs Laj"
+#author: "Luigui Gallardo Becerra"
+date: "03/19/2025"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library("optparse")
+library("ggplot2")
+library("reshape")
+require("gridExtra")
+library("ggpubr")
+library("ggh4x")
+library("dplyr")
+library("rstatix")
+library("vegan")
+```
+
+### Beta diversity contrasting Organs
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Data input
+data <- read.table(file ="./pcoa_data_maz-laj.txt",
+    header = TRUE,
+    sep = '\t')
+
+group = data$Organ
+
+# Define colors
+colors <- c("mediumseagreen",
+            "darkviolet")
+
+# Define shapes
+shapes <- c(15,
+            16)
+
+# Creation of plot pc1 vs pc2
+theme_set(theme_bw())
+graph <- ggplot(data, aes(x = pc1,
+                          y = pc2)) +
+geom_point(aes(col=group,
+               shape=group),
+           size = 3) +
+stat_chull(aes(colour = group,
+               fill = group),
+          alpha = 0.1,
+          geom = "polygon") +
+scale_color_manual(values = colors) +
+scale_shape_manual(values = shapes) +
+  scale_fill_manual(values = colors) +
+labs(
+  x="PC1 (22.50%)",
+  y="PC2 (17.66%)",
+    subtitle = "ANOSIM=0.3583; p-value=0.001",
+    title = "") +
+geom_hline(yintercept=0,
+    color = "gray") +
+geom_vline(xintercept=0,
+    color = "gray") +
+  theme(legend.title = element_blank(),
+        legend.position = c(0.5, 1.1),
+        legend.direction = "horizontal",
+        legend.background = element_blank(),
+        legend.text = element_text(size=12),
+        axis.text.x = element_text(size=12),
+        axis.text.y = element_text(size=12),
+        axis.title.x = element_text(size=12),
+        axis.title.y = element_text(size=12),
+        plot.subtitle = element_text(hjust = 0.5,
+                                     vjust = -1))
+        
+
+
+graph
+
+#Plot tiff
+ggsave(filename = "./organ_maz-laj_pc1-pc2.tiff",
+     width=5,
+     height=5,
+     dpi=300,
+     device="tiff")
+```
+
+
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Creation of plot pc1 vs pc3
+theme_set(theme_bw())
+graph <- ggplot(data, aes(x = pc1,
+                          y = pc3)) +
+geom_point(aes(col=group,
+               shape=group),
+           size = 3) +
+stat_chull(aes(colour = group,
+               fill = group),
+          alpha = 0.1,
+          geom = "polygon") +
+scale_color_manual(values = colors) +
+scale_shape_manual(values = shapes) +
+  scale_fill_manual(values = colors) +
+labs(
+  x="PC1 (22.50%)",
+  y="PC3 (8.61%)",
+    subtitle = "ANOSIM=0.3583; p-value=0.001",
+    title = "") +
+geom_hline(yintercept=0,
+    color = "gray") +
+geom_vline(xintercept=0,
+    color = "gray") +
+  theme(legend.title = element_blank(),
+        legend.position = c(0.5, 1.1),
+        legend.direction = "horizontal",
+        legend.background = element_blank(),
+        legend.text = element_text(size=12),
+        axis.text.x = element_text(size=12),
+        axis.text.y = element_text(size=12),
+        axis.title.x = element_text(size=12),
+        axis.title.y = element_text(size=12),
+        plot.subtitle = element_text(hjust = 0.5,
+                                     vjust = -1))
+        
+
+
+graph
+
+#Plot tiff
+ggsave(filename = "./organ_maz-laj_pc1-pc3.tiff",
+     width=5,
+     height=5,
+     dpi=300,
+     device="tiff")
+```
+
+
+
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Creation of plot pc2 vs pc3
+theme_set(theme_bw())
+graph <- ggplot(data, aes(x = pc3,
+                          y = pc2)) +
+geom_point(aes(col=group,
+               shape=group),
+           size = 3) +
+stat_chull(aes(colour = group,
+               fill = group),
+          alpha = 0.1,
+          geom = "polygon") +
+scale_color_manual(values = colors) +
+scale_shape_manual(values = shapes) +
+  scale_fill_manual(values = colors) +
+labs(
+  y="PC2 (17.66%)",
+  x="PC3 (8.61%)",
+    subtitle = "ANOSIM=0.3583; p-value=0.001",
+    title = "") +
+geom_hline(yintercept=0,
+    color = "gray") +
+geom_vline(xintercept=0,
+    color = "gray") +
+  theme(legend.title = element_blank(),
+        legend.position = c(0.5, 1.1),
+        legend.direction = "horizontal",
+        legend.background = element_blank(),
+        legend.text = element_text(size=12),
+        axis.text.x = element_text(size=12),
+        axis.text.y = element_text(size=12),
+        axis.title.x = element_text(size=12),
+        axis.title.y = element_text(size=12),
+        plot.subtitle = element_text(hjust = 0.5,
+                                     vjust = -1))
+        
+
+
+graph
+
+#Plot tiff
+ggsave(filename = "./organ_maz-laj_pc2-pc3.tiff",
+     width=5,
+     height=5,
+     dpi=300,
+     device="tiff")
+```
+
+### Beta diversity contrasting Genetics
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Data input
+group = data$Genetic
+
+# Define colors
+colors <- c("royalblue",
+            "orangered")
+
+# Define shapes
+shapes <- c(15, 16)
+
+# Creation of plot pc1 vs pc2
+theme_set(theme_bw())
+graph <- ggplot(data, aes(x = pc1,
+                          y = pc2)) +
+geom_point(aes(col=group,
+    shape=group),
+    size = 3) +
+stat_chull(aes(colour = group,
+               fill = group),
+          alpha = 0.1,
+          geom = "polygon") +
+scale_color_manual(values = colors) +
+scale_shape_manual(values = shapes) +
+  scale_fill_manual(values = colors) +
+labs(
+  x="PC1 (22.50%)",
+  y="PC2 (17.66%)",
+    subtitle = "ANOSIM=0.0446; p-value=0.177",
+    title = "") +
+geom_hline(yintercept=0,
+    color = "gray") +
+geom_vline(xintercept=0,
+    color = "gray") +
+  theme(legend.title = element_blank(),
+        legend.position = c(0.5, 1.1),
+        legend.direction = "horizontal",
+        legend.background = element_blank(),
+        legend.text = element_text(size=12),
+        axis.text.x = element_text(size=12),
+        axis.text.y = element_text(size=12),
+        axis.title.x = element_text(size=12),
+        axis.title.y = element_text(size=12),
+        plot.subtitle = element_text(hjust = 0.5,
+                                     vjust = -1))
+
+graph
+
+#Plot tiff
+ggsave(filename = "./genetics_maz-laj_pc1-pc2.tiff",
+     width=5,
+     height=5,
+     dpi=300,
+     device="tiff")
+```
+
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Creation of plot pc1 vs pc3
+theme_set(theme_bw())
+graph <- ggplot(data, aes(x = pc1,
+                          y = pc3)) +
+geom_point(aes(col=group,
+    shape=group),
+    size = 3) +
+stat_chull(aes(colour = group,
+               fill = group),
+          alpha = 0.1,
+          geom = "polygon") +
+scale_color_manual(values = colors) +
+scale_shape_manual(values = shapes) +
+  scale_fill_manual(values = colors) +
+labs(
+  x="PC1 (22.50%)",
+  y="PC3 (8.61%)",
+    subtitle = "ANOSIM=0.0446; p-value=0.177",
+    title = "") +
+geom_hline(yintercept=0,
+    color = "gray") +
+geom_vline(xintercept=0,
+    color = "gray") +
+  theme(legend.title = element_blank(),
+        legend.position = c(0.5, 1.1),
+        legend.direction = "horizontal",
+        legend.background = element_blank(),
+        legend.text = element_text(size=12),
+        axis.text.x = element_text(size=12),
+        axis.text.y = element_text(size=12),
+        axis.title.x = element_text(size=12),
+        axis.title.y = element_text(size=12),
+        plot.subtitle = element_text(hjust = 0.5,
+                                     vjust = -1))
+
+graph
+
+#Plot tiff
+ggsave(filename = "./genetics_maz-laj_pc1-pc3.tiff",
+     width=5,
+     height=5,
+     dpi=300,
+     device="tiff")
+```
+
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+# Creation of plot pc1 vs pc3
+theme_set(theme_bw())
+graph <- ggplot(data, aes(x = pc3,
+                          y = pc2)) +
+geom_point(aes(col=group,
+    shape=group),
+    size = 3) +
+stat_chull(aes(colour = group,
+               fill = group),
+          alpha = 0.1,
+          geom = "polygon") +
+scale_color_manual(values = colors) +
+scale_shape_manual(values = shapes) +
+  scale_fill_manual(values = colors) +
+labs(
+  x="PC3 (8.61%)",
+  y="PC2 (17.66%)",
+    subtitle = "ANOSIM=0.0446; p-value=0.177",
+    title = "") +
+geom_hline(yintercept=0,
+    color = "gray") +
+geom_vline(xintercept=0,
+    color = "gray") +
+  theme(legend.title = element_blank(),
+        legend.position = c(0.5, 1.1),
+        legend.direction = "horizontal",
+        legend.background = element_blank(),
+        legend.text = element_text(size=12),
+        axis.text.x = element_text(size=12),
+        axis.text.y = element_text(size=12),
+        axis.title.x = element_text(size=12),
+        axis.title.y = element_text(size=12),
+        plot.subtitle = element_text(hjust = 0.5,
+                                     vjust = -1))
+
+graph
+
+#Plot tiff
+ggsave(filename = "./genetics_maz-laj_pc2-pc3.tiff",
+     width=5,
+     height=5,
+     dpi=300,
+     device="tiff")
+```

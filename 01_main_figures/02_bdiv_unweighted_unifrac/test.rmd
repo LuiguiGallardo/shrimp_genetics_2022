@@ -1,0 +1,65 @@
+---
+title: "Bdiv Laj vs Maz"
+#author: "Luigui Gallardo Becerra"
+date: "07/12/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library("optparse")
+library("ggplot2")
+library("reshape")
+require("gridExtra")
+library("ggpubr")
+library("ggh4x")
+library("dplyr")
+library("rstatix")
+library("vegan")
+```
+
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+library(vegan)
+library(BiodiversityR)
+
+# Make metadata
+metadata <- cbind.data.frame(SampleID = seq(from = 1, to = 18, by = 1),
+                             Diet = rep(c("Ref", "Soy"), each = 9),
+                             Tank = rep(c("T1", "T2", "T3", "T4", "T5", "T6"), each = 3))
+
+# Make feature table
+set.seed(1910)
+low <- data.frame(replicate(100,sample(0:10, 9, rep = TRUE)))
+colnames(low) <- c(1:100)
+
+set.seed(1910)
+high1 <- data.frame(replicate(90,sample(0:10, 9, rep = TRUE)))
+set.seed(1910)
+high2 <- data.frame(replicate(10,sample(10:30, 9, rep = TRUE)))
+high <- cbind(high1, high2)
+colnames(high) <- c(1:100)
+
+table <- rbind(low, high)
+
+# NMDS #########################################################################
+# Calculate distance metrix
+dist_bray <- vegdist(table, method = "bray")
+
+# Run non-metric multidimensional scaling
+NMDS <- metaMDS(dist_bray, k = 2, trymax = 100, trace = F)
+
+# Define color scheme 
+col_ind <- c(rep("red", 9), rep("blue", 9))
+col_group <- c("red", "blue")
+
+# Basic plot
+ordiplot(NMDS, type = "none", main = "Non-metric multidimensional scaling")
+abline(h = 0, v = 0, lty = "dotted")
+
+# Adding more graphical layers
+points(NMDS, display = "sites", pch = 21, col = col_ind, bg = col_ind)
+ordiellipse(NMDS, groups = metadata$Diet, draw = "polygon", col = col_group)
+ordispider(NMDS, groups = metadata$Diet, col = col_group)
+legend("topright", legend = levels(metadata$Diet), bty = "n", pch = 21, 
+       col = col_group, pt.bg = col_group)    
+```
